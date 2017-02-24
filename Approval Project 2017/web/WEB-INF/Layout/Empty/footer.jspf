@@ -1,0 +1,7 @@
+    <script src="/Approval_Project_2017/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="/Approval_Project_2017/Scripts/bootstrap.min.js"></script>
+    <!--required form-->
+    <script src="/Approval_Project_2017/Scripts/Tools/parsley/dist/parsley.js"></script> 
+    
+</body>
+</html>

@@ -1,0 +1,1147 @@
+﻿/*
+    main color: #7724A4  blue
+    border color : #e7ebf3
+    topic color : #596981
+    text color : #3F3F44
+
+
+*/
+
+@font-face {
+    /*font-family: 'Circular';
+    src: url('../Fonts/Circular/Circular.eot?#iefix') format('embedded-opentype'), url('../Fonts/Circular/Circular.woff') format('woff'), url('../Fonts/Circular/Circular.ttf') format('truetype'), url('../Fonts/Circular/Circular.svg#Bariol-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+    font-family: 'Prompt-Regular';
+    src: url('../Fonts/Prompt/Prompt-Regular.eot?#iefix') format('embedded-opentype'), url('../Fonts/Prompt/Prompt-Regular.woff') format('woff'), url('../Fonts/Prompt/Prompt-Regular.ttf') format('truetype'), url('../Fonts/Prompt/Prompt-Regular.svg#Bariol-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;*/
+    font-family: 'BentonSans-Regular';
+    src: url('../../Fonts/BentonSans/BentonSans-Regular.eot?#iefix') format('embedded-opentype'), url('../../Fonts/BentonSans/BentonSans-Regular.otf') format('opentype'), url('../../Fonts/BentonSans/BentonSans-Regular.woff') format('woff'), url('../../Fonts/BentonSans-Regular.ttf') format('truetype'), url('../../Fonts/BentonSans/BentonSans-Regular.svg#BentonSans-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+}
+
+
+@font-face {
+}
+
+
+html, body {
+    font-size: 14px;
+    display: initial;
+    /*font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Helvetica,Arial,sans-serif;*/
+    font-family: 'BentonSans-Regular','Open Sans'; /* , 'Open Sans',sans-serif, Arial */
+    height: 100%;
+    color: #3F3F44; /* #49586D #4B5C71 */
+    color: #4B5C71;
+    overflow-x: initial;
+    margin: 0px auto;
+    padding: 0px;
+}
+
+@media only screen and (max-device-width: 1200px) {
+    html, body {
+        overflow-x: hidden;
+        display: inline-block;
+    }
+}
+
+button i {
+    padding-right: 5px;
+}
+
+.box_layoutSideBar {
+}
+
+    .box_layoutSideBar .border-bottom {
+        /*width: 1000px;*/
+        margin-right: 0px;
+        min-width: 100%;
+        margin-left: 0px;
+    }
+
+
+    .box_layoutSideBar .box_menuSideBar {
+        margin-top: 55px;
+        min-height: 100vh;
+    }
+
+        .box_layoutSideBar .box_menuSideBar .box_header_topic {
+            padding: 15px 15px;
+            height: auto;
+            overflow: auto;
+        }
+
+            .box_layoutSideBar .box_menuSideBar .box_header_topic .topic_event_name {
+                font-size: 20px;
+                font-weight: bold;
+                color: #7724A4;
+            }
+
+            .box_layoutSideBar .box_menuSideBar .box_header_topic .box_statusEvent {
+                padding: 3px 10px;
+                background-color: #777777;
+                float: left;
+                color: #fff;
+                font-size: 13px;
+                margin-top: 7px;
+                border-radius: 2px;
+            }
+
+            .box_layoutSideBar .box_menuSideBar .box_header_topic .btn_previewEvent {
+                padding: 3px 10px;
+                background-color: #7724A4;
+                float: left;
+                color: #fff;
+                margin-left: 15px;
+                font-size: 13px;
+                margin-top: 7px;
+                border-radius: 2px;
+            }
+
+        .box_layoutSideBar .box_menuSideBar .menuList {
+        }
+
+        .box_layoutSideBar .box_menuSideBar .topicMenu {
+            background-color: rgba(231, 235, 243, 0.30);
+            color: #6c6e7c;
+            cursor: initial;
+            font-size: 11px;
+            padding: 6px 20px 6px 25px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border: 1px solid #e7ebf3;
+        }
+
+        .box_layoutSideBar .box_menuSideBar .subMenu {
+            font-size: 13px;
+            padding: 7px 5px 7px 35px;
+            border-left: 5px solid transparent;
+        }
+
+            .box_layoutSideBar .box_menuSideBar .subMenu:hover {
+                background-color: #e7ebf3;
+                border-left: 5px solid #7724A4;
+            }
+
+            .box_layoutSideBar .box_menuSideBar .subMenu:active {
+                border-left: 5px solid #7724A4;
+            }
+
+    .box_layoutSideBar .box_navbarTop {
+        background-color: #f8f8f8;
+        height: auto;
+        padding-right: 0px;
+        padding: 0px;
+    }
+
+        .box_layoutSideBar .box_navbarTop .topic_name_page {
+            font-size: 16px;
+            display: block;
+            background-color: transparent;
+            color: #7724A4;
+            float: left;
+            margin-left: 10px;
+            padding: 17px 5px 0px 10px;
+        }
+
+        .box_layoutSideBar .box_navbarTop .box_dropdown {
+        }
+
+            .box_layoutSideBar .box_navbarTop .box_dropdown .box_topic_dropdown {
+                background-color: transparent;
+                color: #7724A4;
+                padding: 10px 5px 3px 5px;
+                float: left;
+                height: auto;
+                overflow: auto;
+            }
+
+                .box_layoutSideBar .box_navbarTop .box_dropdown .box_topic_dropdown .imgProfile {
+                    font-size: 35px;
+                    float: left;
+                }
+
+                .box_layoutSideBar .box_navbarTop .box_dropdown .box_topic_dropdown .nameOrganizer {
+                    background-color: transparent;
+                    padding: 8px 5px;
+                    float: left;
+                }
+
+box_topic_dropdown .box_layoutSideBar .box_navbarTop .box_dropdown .box_topic_dropdown .nameOrganizer i {
+    border-top-color: #fff;
+    border-bottom-color: #fff;
+}
+
+.box_layoutSideBar .box_navbarTop .box_dropdown .box_menu_dropdown {
+}
+
+    .box_layoutSideBar .box_navbarTop .box_dropdown .box_menu_dropdown li {
+    }
+
+        .box_layoutSideBar .box_navbarTop .box_dropdown .box_menu_dropdown li.dropdown-header {
+            padding: 7px 0px 0px 7px;
+        }
+
+        .box_layoutSideBar .box_navbarTop .box_dropdown .box_menu_dropdown li.divider {
+            margin: 3px 0px;
+        }
+
+        .box_layoutSideBar .box_navbarTop .box_dropdown .box_menu_dropdown li a {
+            margin: 2px;
+        }
+
+            .box_layoutSideBar .box_navbarTop .box_dropdown .box_menu_dropdown li a:hover {
+                background-color: #7724A4;
+            }
+
+.session_register_completion {
+    padding: 0px;
+    /*background-color:#2957b7;*/
+}
+
+    .session_register_completion .box_header_image {
+        text-align: center;
+        padding: 0px;
+    }
+
+        .session_register_completion .box_header_image img {
+            width: 100%;
+        }
+
+    .session_register_completion .box_register_thankyou {
+        text-align: center;
+        padding: 20px 0px;
+        border: 1px solid #dcdcdc;
+        background-color: #fff;
+    }
+
+        .session_register_completion .box_register_thankyou .title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #0c2662;
+        }
+
+        .session_register_completion .box_register_thankyou .subTitle {
+        }
+
+            .session_register_completion .box_register_thankyou .subTitle p {
+                margin: 3px;
+            }
+
+        .session_register_completion .box_register_thankyou .btn_viewMyTicket {
+            margin-top: 10px;
+            background-color: #0E3181;
+            border: none;
+            padding: 5px 15px;
+            color: #fff;
+            border-radius: 4px;
+        }
+
+            .session_register_completion .box_register_thankyou .btn_viewMyTicket:hover, .session_register_completion .box_register_thankyou .btn_viewMyTicket:focus {
+                background-color: #0c2662;
+            }
+
+.box_event_information {
+    /*margin-top:5px;*/
+    width: 100%;
+    margin-top: -1px;
+    border: 1px solid #dcdcdc;
+    /*border-top:3px solid #0E3181;*/
+    padding: 15px 15px;
+    background-color: #fff;
+}
+
+    .box_event_information .event_name {
+        font-size: 16px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .box_event_information .event_dateTime {
+    }
+
+    .box_event_information .event_place {
+    }
+
+    .box_event_information .event_googleMap {
+        margin-top: 15px;
+    }
+
+        .box_event_information .event_googleMap iframe {
+            width: 100%;
+            min-height: 200px;
+        }
+
+.session_register_applicationForm {
+    padding: 0px 0px 0px 0px;
+}
+
+    .session_register_applicationForm .box_header_image {
+        text-align: center;
+        width: 100%;
+        padding: 0px;
+    }
+
+        .session_register_applicationForm .box_header_image img {
+            width: 100%;
+        }
+
+    .session_register_applicationForm .box_form_holding_tickets {
+        /*border:1px solid #dcdcdc;*/
+        padding: 10px 10px;
+    }
+
+        .session_register_applicationForm .box_form_holding_tickets .topic {
+            text-align: center;
+            padding: 5px 5px;
+            border-radius: 3px 3px 0px 0px;
+            background-color: #0E3181;
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .session_register_applicationForm .box_form_holding_tickets .box_details {
+            border: 1px solid #0E3181;
+            padding: 15px;
+            border-radius: 0px 0px 2px 2px;
+            overflow: auto;
+            height: auto;
+        }
+
+            .session_register_applicationForm .box_form_holding_tickets .box_details .box_minuteLeft {
+                font-size: 25px;
+                font-weight: bold;
+                min-width: 70px;
+                width: 27%;
+                padding-right: 3%;
+            }
+
+            .session_register_applicationForm .box_form_holding_tickets .box_details .box_holding_description {
+                width: 70%;
+                float: left;
+            }
+
+    /************/
+
+    .session_register_applicationForm .box_application_form {
+        padding: 20px 5px;
+        overflow: auto;
+    }
+
+        .session_register_applicationForm .box_application_form .topic {
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .session_register_applicationForm .box_application_form .box_details .form_footer_submit {
+            width: 100%;
+            float: left;
+            height: auto;
+            overflow: auto;
+            margin: 20px 0px 30px 0px;
+        }
+
+            .session_register_applicationForm .box_application_form .box_details .form_footer_submit .btn_submit_form {
+                background-color: #56bd38;
+                margin-bottom: 10px;
+                border: 1px solid #56bd38;
+            }
+
+                .session_register_applicationForm .box_application_form .box_details .form_footer_submit .btn_submit_form:hover {
+                    background-color: #92c714;
+                }
+
+            .session_register_applicationForm .box_application_form .box_details .form_footer_submit .btn_cancel_form {
+                background-color: #c6c6c6;
+                color: #696969;
+            }
+
+                .session_register_applicationForm .box_application_form .box_details .form_footer_submit .btn_cancel_form:hover {
+                    background-color: #bfbfbf;
+                }
+
+.box_checkbox_radioList_form {
+    width: 100%;
+    margin-top: 7px;
+    margin-bottom: 20px;
+}
+
+    .box_checkbox_radioList_form .box_each_checkbox_radio {
+        width: 100%;
+        margin-bottom: 8px;
+        background-color: #f2f2f2;
+        padding: 5px 10px;
+        border: 1px solid #e6e6e6;
+        border-radius: 5px;
+    }
+
+.nav-tabs {
+    background-color: transparent;
+    /*border-width: 2px;
+    border-style: solid;
+    border-color: #7e8c8d;*/
+    border-bottom: 0px;
+    border-radius: 5px;
+    text-align: center;
+    padding: 0px;
+    border-bottom: 1px solid #e7ebf3;
+    margin-bottom: -1px;
+}
+
+    .nav-tabs > li {
+        float: left;
+        margin-bottom: 0px;
+    }
+
+        .nav-tabs > li > a {
+            margin-right: 0px;
+            line-height: 1.42857143;
+            border: 0px solid #dcdcdc;
+            border-bottom: 2px solid transparent;
+            background-color: transparent;
+            border-radius: 0px 0px 0px 0px;
+            color: #a3b0c3;
+            font-weight: bold;
+            padding: 8px 20px 10px 25px;
+            margin-right: 10px;
+            font-size: 16px;
+        }
+
+            .nav-tabs > li > a:hover {
+                background-color: transparent;
+                border-bottom: 2px solid rgba(47, 77, 145, 0.30);
+            }
+
+        .nav-tabs > li.active > a:hover {
+            background-color: transparent;
+            border: 0px solid #dcdcdc;
+            border-bottom: 2px solid #7724A4;
+            color: #7724A4;
+        }
+
+        .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus {
+            color: #7724A4;
+            cursor: default;
+            border: 0px solid #dcdcdc;
+            background-color: transparent;
+            /*border: 1px solid #ddd;*/
+            border-bottom: 2px solid #7724A4;
+        }
+
+.tab-content {
+}
+
+.tab_content_box_organinzer_event {
+    /*border:1px solid #DAE2ED;
+    background-color:#FAF9FB;*/
+    padding: 15px 15px;
+}
+
+.box_organinzer_event .tab_content_box_organinzer_event .box_header_option_eventList {
+    margin-bottom: 10px;
+    float: left;
+    height: auto;
+    width: 100%;
+    overflow: auto;
+}
+
+.box_organinzer_event .tab_content_box_organinzer_event .box_event_list {
+    width: 100%;
+    overflow: auto;
+    height: auto;
+}
+
+    .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event {
+        width: 100%;
+        overflow: auto;
+        float: left;
+        height: auto;
+        margin-bottom: 15px;
+        background-color: #fff;
+        padding: 10px;
+        border: 1px solid #DAE2ED;
+        cursor: pointer;
+    }
+
+        .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event:hover {
+            background-color: #f6f7f8;
+        }
+
+        .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event:last-child {
+            margin-bottom: 0px;
+        }
+
+        .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .event_image {
+            float: left;
+            height: auto;
+            overflow: auto;
+            width: auto;
+        }
+
+            .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .event_image img {
+                height: 100px;
+            }
+
+        .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation {
+            float: left;
+            margin-left: 20px;
+            width: 610px;
+        }
+
+            .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_name {
+                font-size: 17px;
+                font-weight: bold;
+                color: #7724A4;
+            }
+
+            .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_category {
+                padding: 5px 0px 0px 0px;
+                float: left;
+                width: 100%;
+                overflow: auto;
+                height: auto;
+            }
+
+                .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_category .category_text {
+                    float: left;
+                    padding: 3px;
+                    border: 1px solid #e7ebf3;
+                    border-radius: 5px;
+                    font-size: 13px;
+                    margin-right: 7px;
+                    background-color: rgba(231, 235, 243, 0.30);
+                    color: #3F3F44;
+                    margin-bottom: 5px;
+                }
+
+            .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_status {
+                color: #3F3F44;
+                float: left;
+                margin-top: 15px;
+                font-size: 12px;
+                background-color: #e7ebf3;
+                padding: 4px 10px;
+                background-color: #9a9a9a;
+                border-radius: 3px;
+                color: #fff;
+            }
+
+                .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_status.active {
+                    background-color: #53b648;
+                }
+
+                .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_status.nonActive {
+                    background-color: #787a86;
+                }
+
+            .box_organinzer_event .tab_content_box_organinzer_event .box_event_list .box_event .box_event_infomation .event_dateTime {
+                float: left;
+                color: #3F3F44;
+                margin-top: 20px;
+                margin-left: 10px;
+                font-size: 13px;
+            }
+
+
+.box_organizer_event_management {
+}
+
+.box_header_nav_tabs {
+    border-bottom: 2px solid #e7ebf3;
+    margin-top: 10px;
+}
+
+.box_organizer_event_management .tab_content_box_organizer_event_management {
+    /*border: 1px solid #DAE2ED;
+        background-color: #FAF9FB;*/
+    float: left;
+    height: auto;
+    overflow: auto;
+    width: 100%;
+    padding: 15px 15px 15px 15px;
+}
+
+    .box_organizer_event_management .tab_content_box_organizer_event_management .topic {
+        font-size: 20px;
+        font-weight: bold;
+    }
+
+        .box_organizer_event_management .tab_content_box_organizer_event_management .topic i {
+            font-size: 25px;
+            margin-right: 5px;
+        }
+
+    .box_organizer_event_management .tab_content_box_organizer_event_management .details {
+        padding: 20px 0px 30px 0px;
+        float: left;
+        height: auto;
+        width: 100%;
+    }
+
+    .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_image {
+        width: 100%;
+        float: left;
+        overflow: auto;
+        height: auto;
+    }
+
+        .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_image .box_each_event_image .img_event_image_display_preview {
+            border: none;
+            border: 1px solid #e7ebf3;
+            width: 300px;
+            height: 200px;
+            margin-bottom: 15px;
+        }
+
+        .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_image .box_each_event_image .btn_upload_event_image {
+        }
+
+    .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption {
+        width: 100%;
+        float: left;
+        overflow: auto;
+        height: auto;
+        margin-top: 50px;
+    }
+
+        .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption .ibox-content {
+            width: 100%;
+            float: left;
+            overflow: auto;
+            height: auto;
+            border: 1px solid #e7ebf3;
+        }
+
+            .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption .ibox-content .note-editor {
+                float: left;
+                min-height: 100px;
+                width: 100%;
+            }
+
+                .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption .ibox-content .note-editor .note-editable {
+                    height: 100%;
+                    float: left;
+                    resize: vertical;
+                    width: 100%;
+                }
+
+                .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption .ibox-content .note-editor .note-toolbar {
+                    background-color: #f0f2f6;
+                }
+
+                    .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption .ibox-content .note-editor .note-toolbar button {
+                        border: 1px solid #8aa0cb;
+                        padding: 6px 11px;
+                    }
+
+                        .box_organizer_event_management .tab_content_box_organizer_event_management .event_management_descrption .ibox-content .note-editor .note-toolbar button i {
+                            color: #222e4a;
+                            font-size: 12px;
+                        }
+
+    .box_organizer_event_management .tab_content_box_organizer_event_management .form_footer_submit {
+        margin: 40px 0px 20px 0px;
+    }
+
+        .box_organizer_event_management .tab_content_box_organizer_event_management .form_footer_submit .set_btn_cancel_md {
+            float: left;
+            margin-right: 15px;
+        }
+
+        .box_organizer_event_management .tab_content_box_organizer_event_management .form_footer_submit .set_btn_confirm_md {
+            float: right;
+        }
+
+.box_organizer_attendee_management {
+}
+
+    .box_organizer_attendee_management .box_summary_attendee_information {
+        float: left;
+        width: 100%;
+        overflow: auto;
+        height: auto;
+        margin-bottom: 10px;
+        padding: 10px 0px;
+    }
+
+        .box_organizer_attendee_management .box_summary_attendee_information .box_each_summary_info {
+            float: left;
+            margin-right: 30px;
+            border: 1px solid #e7ebf3;
+            border-radius: 3px;
+        }
+
+            .box_organizer_attendee_management .box_summary_attendee_information .box_each_summary_info .title {
+                border: 0px;
+                background-color: #4b5c71;
+                float: left;
+                padding: 3px 15px;
+                color: #fff;
+                font-size: 14px;
+                border-radius: 2px 0px 0px 2px;
+            }
+
+                .box_organizer_attendee_management .box_summary_attendee_information .box_each_summary_info .title i {
+                    margin-right: 5px;
+                }
+
+            .box_organizer_attendee_management .box_summary_attendee_information .box_each_summary_info .value {
+                float: left;
+                padding: 3px 15px;
+            }
+
+.box_table_attendeeList {
+}
+
+    .box_table_attendeeList table {
+        overflow-x: visible !important;
+        overflow-y: visible !important;
+    }
+
+        .box_table_attendeeList table th {
+            padding: 8px 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .box_table_attendeeList table td {
+            padding: 8px 10px;
+        }
+
+            .box_table_attendeeList table td p {
+                margin-bottom: 0px;
+            }
+
+            .box_table_attendeeList table td:last-child {
+                text-align: center;
+            }
+
+            .box_table_attendeeList table td .box_status {
+                text-align: center;
+                padding: 5px 10px;
+                color: #fff;
+                border-radius: 3px;
+                font-size: 13px;
+            }
+
+                .box_table_attendeeList table td .box_status.success {
+                    background-color: #52be20;
+                }
+
+                .box_table_attendeeList table td .box_status.failed {
+                    background-color: #e22d2d;
+                }
+
+                .box_table_attendeeList table td .box_status.normal {
+                    background-color: #7724A4;
+                }
+
+                .box_table_attendeeList table td .box_status.focus {
+                    background-color: #7724A4;
+                }
+
+.box_organizer_event_dashboard {
+}
+
+    .box_organizer_event_dashboard .session_summary_event {
+        width: 100%;
+        float: left;
+        overflow: auto;
+        height: auto;
+    }
+
+        .box_organizer_event_dashboard .session_summary_event .box_each_summary {
+            float: left;
+            overflow: auto;
+            height: auto;
+            padding: 8px 15px;
+            border: 1px solid #e7ebf3;
+            border-radius: 6px;
+            width: 24%;
+            margin: 0px 0.5%;
+        }
+
+            .box_organizer_event_dashboard .session_summary_event .box_each_summary .summary_name {
+                font-size: 16px;
+                font-weight: bold;
+                float: left;
+                color: #7e7e7e;
+            }
+
+            .box_organizer_event_dashboard .session_summary_event .box_each_summary .icon {
+                float: right;
+                font-size: 23px;
+                margin-top: -1px;
+            }
+
+            .box_organizer_event_dashboard .session_summary_event .box_each_summary .value {
+                float: left;
+                font-size: 23px;
+            }
+
+.box_organizer_application_form {
+}
+
+    .box_organizer_application_form .box_application_formList {
+        padding: 20px 0px 10px 0px;
+    }
+
+.box_each_application_form_placeholder {
+    background-color: rgba(231, 235, 243, 0.10);
+    height: 200px;
+    width: 70%;
+    border-color: #e7ebf3;
+    margin: 20px auto;
+}
+
+.box_organizer_application_form .box_application_formList .box_each_application_form {
+    width: 70%;
+    margin: 0px auto;
+    border: 1px solid #e7ebf3;
+    border-radius: 3px;
+    height: auto;
+    overflow: auto;
+    margin-bottom: 30px;
+}
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form:hover {
+        box-shadow: 0px 0px 20px rgba(207, 218, 242, 0.69);
+    }
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_sortable {
+        text-align: center;
+        color: #d0d5dc;
+        background-color: rgba(231, 235, 243, 0.40);
+        cursor: move;
+        padding: 1px 0px;
+        font-size: 14px;
+    }
+
+        .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_sortable:hover {
+            background-color: rgba(231, 235, 243, 0.20);
+        }
+
+        .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_sortable i {
+            background-color: rgba(231, 235, 243, 0.10);
+        }
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top {
+        width: 100%;
+        float: left;
+        overflow: auto;
+        height: auto;
+        padding: 10px 20px 10px 20px;
+        background-color: rgba(231, 235, 243, 0.40);
+    }
+
+.box_each_answer_form_placeholder {
+    background-color: rgba(231, 235, 243, 0.10);
+    height: 40px;
+    width: 100%;
+    border-color: #e7ebf3;
+    margin: 10px 0px 0px 0px;
+    float: left;
+}
+
+.box_each_answer_form_placeholder_hover {
+    background-color: #fafbfd;
+    box-shadow: 0px 0px 5px rgba(207, 218, 242, 1);
+}
+
+.box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer {
+    float: left;
+    width: 100%;
+    margin-top: 10px;
+}
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer:first-child {
+        margin-top: 0px;
+    }
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer .box_sortable {
+        text-align: center;
+        color: #d0d5dc;
+        padding: 2px 0px;
+        font-size: 14px;
+        float: left;
+    }
+
+        .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer .box_sortable i {
+            cursor: move;
+            padding: 12px 8px 12px 8px;
+            font-size: 10px;
+        }
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer input {
+        float: left;
+        width: 83%;
+    }
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer i {
+        float: left;
+        padding: 10px 5px 10px 10px;
+        font-size: 16px;
+        cursor: pointer;
+        opacity: 0.6;
+    }
+
+        .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_top .box_each_answer i:hover {
+            opacity: 1;
+        }
+
+.box_organizer_application_form .box_application_formList .box_each_application_form .box_part_bottom {
+    width: 100%;
+    float: left;
+    overflow: auto;
+    height: auto;
+    background-color: rgba(231, 235, 243, 0.1);
+    padding: 6px 23px;
+    border-top: 1px solid #e7ebf3;
+    opacity: 0.6;
+}
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_part_bottom:hover {
+        opacity: 1;
+    }
+
+.box_organizer_application_form .box_application_formList .box_each_application_form {
+}
+
+    .box_organizer_application_form .box_application_formList .box_each_application_form .box_each_tools {
+    }
+
+        .box_organizer_application_form .box_application_formList .box_each_application_form .box_each_tools.box_btn_bin_remove i {
+            font-size: 22px;
+            padding-right: 20px;
+            border-right: 1px solid #e7ebf3;
+            cursor: pointer;
+            color: #4b5c71;
+            margin-top: 3px;
+        }
+
+            .box_organizer_application_form .box_application_formList .box_each_application_form .box_each_tools.box_btn_bin_remove i:hover {
+                color: #37465a;
+            }
+
+        .box_organizer_application_form .box_application_formList .box_each_application_form .box_each_tools.box_require_checkbox {
+            margin-top: 2px;
+            margin-left: 20px;
+        }
+
+.box_organizer_application_form .footer_application_actions {
+    text-align: center;
+}
+
+.box_organizer_application_form .footer_application_save {
+    text-align: center;
+    margin: 100px auto;
+}
+
+.box_alert_message {
+    position: absolute;
+    left: 39%;
+}
+    /* red  : #ee5641 */
+    /* green: #4db96a */
+    .box_alert_message div {
+        color: #fff;
+        font-size: 18px;
+        border-radius: 3px;
+        background-color: #ee5641;
+        text-align: center;
+        padding: 8px 40px;
+        float: left;
+    }
+
+        .box_alert_message div i {
+            padding-right: 10px;
+        }
+
+        .box_alert_message div#alert_message_succeed {
+            background-color: #4db96a;
+            display: none;
+        }
+
+        .box_alert_message div#alert_message_failed {
+            background-color: #ee5641;
+            display: none;
+        }
+
+.session_organization {
+}
+
+    .session_organization .box_organizationList {
+        width: 100%;
+        float: left;
+        height: auto;
+        overflow: auto;
+        padding: 20px 0px;
+    }
+
+        .session_organization .box_organizationList .box_each_orgainzation {
+            width: 100%;
+            overflow: auto;
+            float: left;
+            height: auto;
+            margin-bottom: 20px;
+            background-color: #fff;
+            padding: 10px 0px 0px 0px;
+            border: 1px solid #DAE2ED;
+            cursor: pointer;
+        }
+
+            .session_organization .box_organizationList .box_each_orgainzation:hover {
+                background-color: #f6f7f8;
+            }
+
+            .session_organization .box_organizationList .box_each_orgainzation:last-child {
+                margin-bottom: 0px;
+            }
+
+            .session_organization .box_organizationList .box_each_orgainzation .box_logo {
+                float: left;
+                height: auto;
+                overflow: auto;
+                width: auto;
+                margin-left: 10px;
+            }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_logo img {
+                    height: 100px;
+                }
+
+            .session_organization .box_organizationList .box_each_orgainzation .box_info {
+                float: left;
+                margin-left: 20px;
+                width: 610px;
+            }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_info .organization_name {
+                    font-size: 17px;
+                    font-weight: bold;
+                    color: #7724A4;
+                    width: 100%;
+                    float: left;
+                }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_info .phone_number {
+                    padding: 5px 0px 0px 0px;
+                    width: 100%;
+                    float: left;
+                }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_info .email {
+                    padding: 3px 0px 0px 0px;
+                    width: 100%;
+                    float: left;
+                }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_info .website {
+                    padding: 3px 0px 10px 0px;
+                    width: 100%;
+                    float: left;
+                }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_info i {
+                }
+
+            .session_organization .box_organizationList .box_each_orgainzation .box_member_organizerList {
+                width: 100%;
+                float: left;
+                border-top: 1px solid #e7ebf3;
+                padding: 7px 10px 10px 10px;
+                height: auto;
+                overflow: auto;
+                background-color: #f6f7f8;
+            }
+
+                .session_organization .box_organizationList .box_each_orgainzation .box_member_organizerList .member_organizer {
+                    background-color: #7724A4;
+                    padding: 5px 8px;
+                    border-radius: 50%;
+                    color: #fff;
+                    margin-right: 4px;
+                    font-size: 9px;
+                }
+
+    .session_organization .box_organization_profile {
+        width: 100%;
+        overflow: auto;
+        float: left;
+        height: auto;
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #DAE2ED;
+    }
+
+        .session_organization .box_organization_profile .box_part_1 {
+            text-align: center;
+        }
+
+            .session_organization .box_organization_profile .box_part_1 .organization_logo {
+                height: 100px;
+            }
+
+            .session_organization .box_organization_profile .box_part_1 .organization_name {
+                width: 100%;
+                float: left;
+                font-weight: bold;
+                font-size: 19px;
+            }
+
+        .session_organization .box_organization_profile .box_part_2 {
+            margin: 0px 4%;
+        }
+
+            .session_organization .box_organization_profile .box_part_2 .description {
+            }
+
+        .session_organization .box_organization_profile .box_part_3 {
+        }
+
+            .session_organization .box_organization_profile .box_part_3 span {
+                width: 100%;
+                float: left;
+                padding-bottom: 8px;
+                font-size: 14px;
+            }
+
+                .session_organization .box_organization_profile .box_part_3 span i {
+                    margin-right: 5px;
+                }
+
+            .session_organization .box_organization_profile .box_part_3 .phone_number {
+            }
+
+            .session_organization .box_organization_profile .box_part_3 .email {
+            }
+
+            .session_organization .box_organization_profile .box_part_3 .website {
+                color: #22A7F0;
+            }
+
+            .session_organization .box_organization_profile .box_part_3 .facebook {
+                color: #3b5998;
+            }
+
+            .session_organization .box_organization_profile .box_part_3 .line {
+                color: #00b900;
+            }
+
+    .session_organization .box_organization_member {
+        width: 100%;
+        overflow: auto;
+        float: left;
+        height: auto;
+        margin-bottom: 20px;
+        background-color: #fff;
+    }
