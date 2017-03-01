@@ -30,10 +30,13 @@ page import="Models.*;"
                             <div class="session_student_requested">
                                 <div class="box_requestList">
                                     <c:forEach items="{$getAllRequests}" var="request">
+                                        <%
+                                            //FormModel formRequest = ((FormGroupModel)${request}).getFormList().get(0);
+                                        %>
                                         <a href="/Approval_Project_2017/Coordinator/Details" class="box_each_requested">
                                                 <div class="box_info_top">
                                                     <div class="set_float_left">
-                                                        <span class="event_name">${formRequest.form_group_id}</span>
+                                                        <span class="event_name">${request.form_group_id}</span>
                                                         <span class="event_type">Education</span>
                                                         <span class="event_department"><i class="fa fa-university" aria-hidden="true"></i> Science and Technology</span>
                                                         <span class="event_dateTime">
