@@ -9,7 +9,6 @@ import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-
 /**
  *
  * @author SONY
@@ -18,8 +17,8 @@ public class DBUtils {
     public static PreparedStatement getPreparedStatement(String sql) throws ClassNotFoundException, SQLException{
         PreparedStatement ps = null;
         Class.forName("com.mysql.jdbc.Driver");
-        //String url = "jdbc:mysql://ap-cdbr-azure-southeast-b.cloudapp.net/approval_enterprise";
-        String url = "jdbc:mysql://ap-cdbr-azure-southeast-b.cloudapp.net;databaseName=approval_enterprise";
+        String url = "jdbc:mysql://ap-cdbr-azure-southeast-b.cloudapp.net:3306/approval_enterprise";
+        //String url = "jdbc:mysql://ap-cdbr-azure-southeast-b.cloudapp.net;databaseName=approval_enterprise";
         String user = "b6f663e592256f";
         String pass = "e8d63265";
         
