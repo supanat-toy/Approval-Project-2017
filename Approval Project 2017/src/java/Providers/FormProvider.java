@@ -1,9 +1,9 @@
-package providers;
+package Providers;
 
 import DBConnection.DBUtils;
 import java.sql.ResultSet;
 import java.util.*;
-import models.*;
+import Models.*;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

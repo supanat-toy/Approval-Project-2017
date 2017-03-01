@@ -1,4 +1,4 @@
-package Controller;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -13,6 +13,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import Models.*;
+import Providers.*;
 
 /**
  *
@@ -70,8 +72,8 @@ public class CoordinatorServlet extends HttpServlet {
        
         if (userPath.equals("/Coordinator")) {
             userPath += "/List";
-            
-            
+            request.setAttribute("getAllRequests",FormProvider.getAllRequests(8));
+          
         } else if (userPath.equals("/Coordinator/Create")) {
             
             
@@ -109,7 +111,7 @@ public class CoordinatorServlet extends HttpServlet {
         // if addToCart action is called
          if (userPath.equals("/Coordinator")) {
             userPath = "/List";
-            
+            System.out.println("count: "+FormProvider.getAllRequests(8).size());
             
         } else if (userPath.equals("/Coordinator/Create")) {
             

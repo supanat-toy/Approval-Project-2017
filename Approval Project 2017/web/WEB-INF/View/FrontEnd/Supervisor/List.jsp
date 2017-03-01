@@ -1,4 +1,8 @@
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="Models.*"%>
+
 <!--@{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout_Member.cshtml";
@@ -24,12 +28,12 @@
                             <div class="session_student_requested">
                                 <div class="box_requestList">
                                     
-                                    <% for(int i = 0; i < 5; i++) { %>
-                                        
-                                            <a href="/Approval_Project_2017/Supervisor/Details" class="box_each_requested">
+                                    <c:forEach items="{$getAllRequests}" var="formRequest">
+                                       
+                                        <a href="/Approval_Project_2017/Coordinator/Details" class="box_each_requested">
                                                 <div class="box_info_top">
                                                     <div class="set_float_left">
-                                                        <span class="event_name">CS Festival</span>
+                                                        <span class="event_name">${formRequest.form_group_id}</span>
                                                         <span class="event_type">Education</span>
                                                         <span class="event_department"><i class="fa fa-university" aria-hidden="true"></i> Science and Technology</span>
                                                         <span class="event_dateTime">
@@ -40,12 +44,12 @@
                                                     </div>
                                                     <div class="set_float_right">
                                                         <div class="box_status_instructor">
-                                                            <span class="icon_status pending">
-                                                                <i class="fa fa-question" aria-hidden="true"></i>
+                                                            <span class="icon_status approved">
+                                                                <i class="fa fa-check" aria-hidden="true"></i>
                                                             </span>
                                                             <div class="box_instructor_info">
                                                                 <span class="title">Responded by</span>
-                                                                <span class="instructor_name"> </span>
+                                                                <span class="instructor_name">Dr.SongSak S.</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -58,7 +62,7 @@
                                                             <div class="box_coordinator_info">
                                                                 <span class="name">Chayapol</span>
                                                                 <span class="phone">09045450652</span>
-                                                            </div>
+                                                            </div>  
                                                         </div>
                                                         <span>
 
@@ -85,7 +89,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                    <% } %>
+                                    </c:forEach>  
 
                                 </div>
                             </div>

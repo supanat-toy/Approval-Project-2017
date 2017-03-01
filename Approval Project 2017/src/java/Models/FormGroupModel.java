@@ -1,4 +1,4 @@
-package models;
+package Models;
 import java.util.*;
 
 /*
@@ -13,7 +13,7 @@ import java.util.*;
  */
 public class FormGroupModel {
     private int form_group_id;
-    private List<FormModel> requests;
+    private List<FormModel> formList;
     private Date created_date;
     private int created_by;
     private Date updated_date;
@@ -21,7 +21,7 @@ public class FormGroupModel {
 
     public FormGroupModel(int form_group_id, List<FormModel> requests, Date created_date, int created_by, Date updated_date, int updated_by) {
         this.form_group_id = form_group_id;
-        this.requests = requests;
+        this.formList = requests;
         this.created_date = created_date;
         this.created_by = created_by;
         this.updated_date = updated_date;
@@ -32,8 +32,8 @@ public class FormGroupModel {
         return form_group_id;
     }
 
-    public List<FormModel> getRequests() {
-        return requests;
+    public List<FormModel> getFormList() {
+        return formList;
     }
 
     public Date getCreated_date() {
@@ -56,8 +56,8 @@ public class FormGroupModel {
         this.form_group_id = form_group_id;
     }
 
-    public void setRequests(List<FormModel> requests) {
-        this.requests = requests;
+    public void setFormList(List<FormModel> requests) {
+        this.formList = requests;
     }
 
     public void setCreated_date(Date created_date) {

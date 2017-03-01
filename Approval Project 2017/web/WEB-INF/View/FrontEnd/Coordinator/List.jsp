@@ -1,5 +1,11 @@
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="java.util.List"%>
+<%@page import="Models.*"%>
+
+
 <!--@{
+page import="Models.*;"
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout_Member.cshtml";
 }-->
@@ -23,11 +29,11 @@
                         <div id="event_active" class="tab-pane fade in active">
                             <div class="session_student_requested">
                                 <div class="box_requestList">
-                                    <% for(int i = 0; i < 5; i++) { %>
-                                            <a href="/Approval_Project_2017/Coordinator/Details" class="box_each_requested">
+                                    <c:forEach items="{$getAllRequests}" var="request">
+                                        <a href="/Approval_Project_2017/Coordinator/Details" class="box_each_requested">
                                                 <div class="box_info_top">
                                                     <div class="set_float_left">
-                                                        <span class="event_name">CS Festival</span>
+                                                        <span class="event_name">${formRequest.form_group_id}</span>
                                                         <span class="event_type">Education</span>
                                                         <span class="event_department"><i class="fa fa-university" aria-hidden="true"></i> Science and Technology</span>
                                                         <span class="event_dateTime">
@@ -83,8 +89,7 @@
                                                     </div>
                                                 </div>
                                             </a>
-                                       <% } %>
-                                    
+                                    </c:forEach>                                    
                                 </div>
                             </div>     
                         </div>
