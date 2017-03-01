@@ -69,6 +69,7 @@ public class AdminDirectorServlet extends HttpServlet {
             userPath += "/List";
             
             
+            
         } else if (userPath.equals("/AdminDirector/Details")) {
             
         }

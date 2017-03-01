@@ -324,7 +324,7 @@ h5 {
 
     .nav-second-level li:last-child {
         margin-bottom: 0px;
-        ==;
+        
     }
 
 body:not(.fixed-sidebar):not(.canvas-menu).mini-navbar .nav li:hover > .nav-second-level,
