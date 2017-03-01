@@ -11,7 +11,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 /**
  *
- * @author SONY
+ * Video:  https://www.youtube.com/watch?v=DN3VAZdhLik
  */
 public class DBUtils {
     public static PreparedStatement getPreparedStatement(String sql) throws ClassNotFoundException, SQLException{
