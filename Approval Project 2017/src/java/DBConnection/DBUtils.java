@@ -5,10 +5,14 @@
  */
 package DBConnection;
 
+import Models.FormGroupModel;
+import Models.FormModel;
+import Providers.FormProvider;
 import java.sql.PreparedStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.List;
 /**
  *
  * Video:  https://www.youtube.com/watch?v=DN3VAZdhLik
@@ -28,7 +32,9 @@ public class DBUtils {
     }
     
     public static void main(String[] args) throws ClassNotFoundException, SQLException{
-        getPreparedStatement("SELECT * FROM form_type;");
-        
+        List<FormGroupModel> results = FormProvider.getAllRequests(8);
+        //List<FormModel> results = FormProvider.getForms(1);
+        //System.out.print(results.size());
+        System.out.print(results.get(0).getForm_group_id() + ":" + results.get(0).getFormList().size());
     }
 }
