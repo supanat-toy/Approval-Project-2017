@@ -73,6 +73,7 @@ public class CoordinatorServlet extends HttpServlet {
         if (userPath.equals("/Coordinator")) {
             userPath += "/List";
             request.setAttribute("getAllRequests",FormProvider.getAllRequests(8));
+            System.out.println("ssss");
           
         } else if (userPath.equals("/Coordinator/Create")) {
             
