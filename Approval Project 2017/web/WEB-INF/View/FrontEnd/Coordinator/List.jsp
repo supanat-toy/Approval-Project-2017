@@ -1,8 +1,6 @@
 
-<%@page import="java.util.ArrayList"%>
-<%@page import="java.util.List"%>
 <%@page import="Models.*"%>
-
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!--@{
 page import="Models.*;"
@@ -29,7 +27,7 @@ page import="Models.*;"
                         <div id="event_active" class="tab-pane fade in active">
                             <div class="session_student_requested">
                                 <div class="box_requestList">
-                                    <c:forEach items="{$getAllRequests}" var="request">
+                                    <c:forEach items="${getAllRequests}" var="request">
                                         <%
                                             //FormModel formRequest = ((FormGroupModel)${request}).getFormList().get(0);
                                         %>
