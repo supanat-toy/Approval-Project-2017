@@ -18,18 +18,16 @@
     </dependency>
   </dependencies>
   <build>
+      <finalName>Approval-Project-2017</finalName>
       <plugins>
-  <plugin>
-      <groupId>org.apache.maven.plugins</groupId>
-      <artifactId>maven-war-plugin</artifactId>
-      <configuration>
-          <webXml>Approval Project 2017\web\WEB-INF\web.xml</webXml>
-      </configuration>
-  </plugin>
+          <plugin>
+              <groupId>org.apache.maven.plugins</groupId>
+              <artifactId>maven-war-plugin</artifactId>
+              <configuration>
+                  <webXml>Approval Project 2017\web\WEB-INF\web.xml</webXml>
+              </configuration>
+          </plugin>
       </plugins>
-  </build>
-  <build>
-    <finalName>Approval-Project-2017</finalName>
   </build>
 </project>
 
