@@ -1,4 +1,5 @@
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="Models.*"%>
@@ -29,16 +30,16 @@ page import="Models.*;"
                         <div id="event_active" class="tab-pane fade in active">
                             <div class="session_student_requested">
                                 <div class="box_requestList">
-                                    <c:forEach items="{$getAllRequests}" var="request">
+                                    <c:forEach items="${getAllRequests}" var="request">
                                         <%
                                             //FormModel formRequest = ((FormGroupModel)${request}).getFormList().get(0);
                                         %>
                                         <a href="/Approval_Project_2017/Coordinator/Details" class="box_each_requested">
                                                 <div class="box_info_top">
                                                     <div class="set_float_left">
-                                                        <span class="event_name">${request.form_group_id}</span>
-                                                        <span class="event_type">Education</span>
-                                                        <span class="event_department"><i class="fa fa-university" aria-hidden="true"></i> Science and Technology</span>
+                                                        <span class="event_name">${request.basic_form.event_name}</span>
+                                                        <span class="event_type">${request.basic_form.activity}</span>
+                                                        <span class="event_department"><i class="fa fa-university" aria-hidden="true"></i> ${result.basic_form.department}</span>
                                                         <span class="event_dateTime">
                                                             <i class="fa fa-calendar" aria-hidden="true"></i> 12-14/12/2016
                                                             <i class="set_margin_right_10"></i>
@@ -52,7 +53,7 @@ page import="Models.*;"
                                                             </span>
                                                             <div class="box_instructor_info">
                                                                 <span class="title">Responded by</span>
-                                                                <span class="instructor_name">Dr.SongSak S.</span>
+                                                                <span class="instructor_name">${result.latest_response.name}</span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -63,8 +64,8 @@ page import="Models.*;"
                                                         <div class="box_coordinator">
                                                             <i class="icon_coordinator fa fa-user-circle-o" aria-hidden="true"></i>
                                                             <div class="box_coordinator_info">
-                                                                <span class="name">Chayapol</span>
-                                                                <span class="phone">09045450652</span>
+                                                                <span class="name">${result.basic_form.coordinator_name}</span>
+                                                                <span class="phone">${result.basic_form.coordinator_phone_number}</span>
                                                             </div>  
                                                         </div>
                                                         <span>
