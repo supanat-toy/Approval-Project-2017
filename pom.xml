@@ -4,10 +4,10 @@
 	http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.mkyong</groupId>
-	<artifactId>CounterWebApp</artifactId>
+	<artifactId>Approval-Project-2017</artifactId>
 	<packaging>war</packaging>
 	<version>1.0-SNAPSHOT</version>
-	<name>CounterWebApp Maven Webapp</name>
+	<name>Approval Maven Webapp</name>
 	<url>http://maven.apache.org</url>
 	<properties>
 		<jdk.version>1.7</jdk.version>
@@ -19,45 +19,7 @@
 	</properties>
 
 	<build>
-		<finalName>CounterWebApp</finalName>
-
-		<plugins>
-		    <!-- Eclipse project -->
-		  <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-eclipse-plugin</artifactId>
-			<version>2.9</version>
-			<configuration>
-			        <!-- Always download and attach dependencies source code -->
-				<downloadSources>true</downloadSources>
-				<downloadJavadocs>false</downloadJavadocs>
-				<!-- Avoid type mvn eclipse:eclipse -Dwtpversion=2.0 -->
-				<wtpversion>2.0</wtpversion>
-			</configuration>
-		  </plugin>
-
-		  <!-- Set JDK Compiler Level -->
-		  <plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>2.3.2</version>
-			<configuration>
-				<source>${jdk.version}</source>
-				<target>${jdk.version}</target>
-			</configuration>
-		  </plugin>
-
-		  <!-- For Maven Tomcat Plugin -->
-		  <plugin>
-			<groupId>org.apache.tomcat.maven</groupId>
-			<artifactId>tomcat7-maven-plugin</artifactId>
-			<version>2.2</version>
-			<configuration>
-				<path>/CounterWebApp</path>
-			</configuration>
-		  </plugin>
-
-		</plugins>
+		<finalName>Approval-Project-2017</finalName>
 
 	</build>
 </project>
