@@ -1,1 +1,1 @@
-web: sh target/bin/Approval_Project_ 2017/webapp
+web: sh target/bin/webapp
