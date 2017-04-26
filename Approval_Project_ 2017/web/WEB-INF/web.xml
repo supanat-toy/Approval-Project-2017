@@ -9,14 +9,14 @@
         <!--header and footer settings ( Member )-->
         <jsp-property-group>
             <description>header and footer settings ( Member )</description>
-            <url-pattern>/WEB-INF/View/FrontEnd/*</url-pattern>
+            <url-pattern>/WEB-INF/View/Web/*</url-pattern>
             <include-prelude>/WEB-INF/Layout/Member/header.jspf</include-prelude>
             <include-coda>/WEB-INF/Layout/Member/footer.jspf</include-coda>
         </jsp-property-group>
         <!--header and footer settings ( Empty )-->
         <jsp-property-group>
             <description>header and footer settings ( Empty )</description>
-            <url-pattern>/login.jsp</url-pattern>
+            <url-pattern>/index.jsp</url-pattern>
             <include-prelude>/WEB-INF/Layout/Empty/header.jspf</include-prelude>
             <include-coda>/WEB-INF/Layout/Empty/footer.jspf</include-coda>
         </jsp-property-group>

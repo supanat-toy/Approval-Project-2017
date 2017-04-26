@@ -3,17 +3,22 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <!DOCTYPE html>
+
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>123</title>
-    <link href="/Approval_Project_2017/Contents/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+    <title>Login - Approval</title>
+    <link href="${pageContext.request.contextPath}/Contents/bootstrap.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-    <link href="/Approval_Project_2017/Contents/layout_website.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/layout_website.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <link href="Scripts/Tools/parsley/src/parsley.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Contents/common.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Contents/common_2.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Scripts/Tools/parsley/src/parsley.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/common.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/common_2.css" rel="stylesheet" />
 
 </head>
 <body>

@@ -4,41 +4,24 @@
  * and open the template in the editor.
  */
 package Models;
+
 import java.util.Date;
+
 /**
  *
- * @author USER
+ * @author supanattechasothon
  */
-public class UserModel {
+public class mUser {
     private int user_id;
     private String name;
     private String phone_number;
     private String email;
     private String password;
-    private int responsible_form_type;
+    private int responsible_form_type_id;
     private Date created_date;
     private Date updated_date;
 
-    public UserModel(){
-        this.user_id = 0;
-        this.name = "";
-        this.phone_number = "";
-        this.email = "";
-        this.password = "";
-        this.responsible_form_type = 0;
-        this.created_date = new Date();
-        this.updated_date = new Date();
-    }
-    
-    public UserModel(int user_id, String name, String phone_number, String email, String password, int responsible_form_type, Date created_date, Date updated_date) {
-        this.user_id = user_id;
-        this.name = name;
-        this.phone_number = phone_number;
-        this.email = email;
-        this.password = password;
-        this.responsible_form_type = responsible_form_type;
-        this.created_date = created_date;
-        this.updated_date = updated_date;
+    public mUser() {
     }
 
     public int getUser_id() {
@@ -81,12 +64,12 @@ public class UserModel {
         this.password = password;
     }
 
-    public int getResponsible_form_type() {
-        return responsible_form_type;
+    public int getResponsible_form_type_id() {
+        return responsible_form_type_id;
     }
 
-    public void setResponsible_form_type(int responsible_form_type) {
-        this.responsible_form_type = responsible_form_type;
+    public void setResponsible_form_type_id(int responsible_form_type_id) {
+        this.responsible_form_type_id = responsible_form_type_id;
     }
 
     public Date getCreated_date() {

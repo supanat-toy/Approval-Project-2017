@@ -2,24 +2,28 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
     "http://www.w3.org/TR/html4/loose.dtd">
 
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
+
+
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Approval</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link href="/Approval_Project_2017/Contents/bootstrap.min.css" rel="stylesheet" type="text/css" />
-    <link href="/Approval_Project_2017/Contents/Tools/MenuSideBar/animate.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Contents/Tools/MenuSideBar/style.css" rel="stylesheet" type="text/css"/>
+    <link href="${pageContext.request.contextPath}/Contents/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="${pageContext.request.contextPath}/Contents/Tools/MenuSideBar/animate.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/Tools/MenuSideBar/style.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans" />
-    <link href="/Approval_Project_2017/Contents/layout_website.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Contents/common.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Contents/common_2.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/layout_website.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/common.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Contents/common_2.css" rel="stylesheet" />
     
-    <link href="/Approval_Project_2017/Scripts/Tools/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Scripts/Tools/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Scripts/Tools/bootstrap-eonasdan-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Scripts/Tools/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
-    <link href="/Approval_Project_2017/Scripts/Tools/select2/dist/css/select2.min.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-datepicker/css/datepicker3.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-eonasdan-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-timepicker/css/bootstrap-timepicker.min.css" rel="stylesheet" />
+    <link href="${pageContext.request.contextPath}/Scripts/Tools/select2/dist/css/select2.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -30,7 +34,7 @@
                     <div class="navbar-header">
                         <ul class="nav navbar-top-links navbar-left set_float_left" style="margin-right:0px;">
                             <li>
-                                <a href="/Approval_Project_2017/Coordinator" class="topic_name_page">
+                                <a href="/Coordinator" class="topic_name_page">
                                     Approval
                                 </a>
                             </li>

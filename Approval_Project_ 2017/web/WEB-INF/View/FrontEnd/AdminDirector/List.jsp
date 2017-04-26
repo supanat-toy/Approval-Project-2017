@@ -24,7 +24,7 @@
                             <div class="session_student_requested">
                                 <div class="box_requestList">
                                     <% for(int i = 0; i < 5; i++) { %>
-                                            <a href="/Approval_Project_2017/AdminDirector/Details" class="box_each_requested">
+                                            <a href="/AdminDirector/Details" class="box_each_requested">
                                                 <div class="box_info_top">
                                                     <div class="set_float_left">
                                                         <span class="event_name">CS Festival</span>

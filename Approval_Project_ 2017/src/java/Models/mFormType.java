@@ -7,17 +7,16 @@ package Models;
 
 /**
  *
- * @author USER
+ * @author SONY
  */
-public class FormTypeModel {
-    
-    public FormTypeModel(){
-        this.form_type_id = 0;
-        this.name = "";
-    }
-    
+public class mFormType {
     private int form_type_id;
-    String name;
+    private String name;
+
+    public mFormType(int form_type_id, String name) {
+        this.form_type_id = form_type_id;
+        this.name = name;
+    }
 
     public int getForm_type_id() {
         return form_type_id;
@@ -34,4 +33,6 @@ public class FormTypeModel {
     public void setName(String name) {
         this.name = name;
     }
+    
+    
 }

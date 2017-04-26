@@ -5,21 +5,21 @@
 
 
 
-    <script src="/Approval_Project_2017/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="/Approval_Project_2017/Scripts/Tools/jquery-ui/ui/minified/jquery-ui.min.js"></script>
-    <script src="/Approval_Project_2017/Scripts/Tools/MenuSideBar/plugins/metisMenu/jquery.metisMenu.js" type="text/javascript"></script>
-    <script src="/Approval_Project_2017/Scripts/Tools/MenuSideBar/bootstrap.min.js" type="text/javascript"></script>
-    <script src="/Approval_Project_2017/Scripts/Tools/MenuSideBar/plugins/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/jquery-ui/ui/minified/jquery-ui.min.js"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/plugins/metisMenu/jquery.metisMenu.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/bootstrap.min.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/plugins/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
     <!-- Custom and plugin javascript -->
-    <script src="/Approval_Project_2017/Scripts/Tools/MenuSideBar/inspinia.js" type="text/javascript"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/inspinia.js" type="text/javascript"></script>
 
     <!-- Create Event -->
 
-    <script src="/Approval_Project_2017/Scripts/Tools/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> <!-- Form - Date Picker -->
-    <script src="/Approval_Project_2017/Scripts/Tools/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script> <!-- Form - Time Picker -->
-    <script src="/Approval_Project_2017/Scripts/Tools/select2/dist/js/select2.min.js"></script> <!-- Form - Select Dropdown -->
-    <script src="/Approval_Project_2017/Scripts/Tools/bootstrap-eonasdan-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> <!-- Form - DateTime Picker -->
-    <script src="/Approval_Project_2017/Scripts/js/apps.min.js"></script>
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-datepicker/js/bootstrap-datepicker.js"></script> <!-- Form - Date Picker -->
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script> <!-- Form - Time Picker -->
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/select2/dist/js/select2.min.js"></script> <!-- Form - Select Dropdown -->
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/bootstrap-eonasdan-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script> <!-- Form - DateTime Picker -->
+    <script src="${pageContext.request.contextPath}/Scripts/js/apps.min.js"></script>
     <script>
         $(document).ready(function () {
             $("#multiple-select2").select2({ placeholder: "" });

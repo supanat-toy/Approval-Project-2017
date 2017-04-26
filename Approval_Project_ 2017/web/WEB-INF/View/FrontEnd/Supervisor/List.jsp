@@ -30,7 +30,7 @@
                                     
                                     <c:forEach items="{$getAllRequests}" var="formRequest">
                                        
-                                        <a href="/Approval_Project_2017/Coordinator/Details" class="box_each_requested">
+                                        <a href="/Coordinator/Details" class="box_each_requested">
                                                 <div class="box_info_top">
                                                     <div class="set_float_left">
                                                         <span class="event_name">${formRequest.form_group_id}</span>

@@ -4,40 +4,33 @@
  * and open the template in the editor.
  */
 package Models;
+
 import java.util.Date;
+
 /**
  *
- * @author USER
+ * @author supanattechasothon
  */
-public class ResponseMessageModel {
+public class mResponseMessage {
+    
     private int response_message_id;
     private int form_id;
+    private int form_department_id;
+    private String form_department_name;
     private String message;
     private Date created_date;
     private int created_by;
     private Date updated_date;
     private int updated_by;
+
+    public String getForm_department_name() {
+        return form_department_name;
+    }
+
+    public void setForm_department_name(String form_department_name) {
+        this.form_department_name = form_department_name;
+    }
     
-    public ResponseMessageModel(){
-        this.response_message_id = 0;
-        this.form_id = 0;
-        this.message = "";
-        this.created_date = new Date();
-        this.created_by = 0;
-        this.updated_date = new Date();
-        this.updated_by = 0;
-    }
-
-    public ResponseMessageModel(int response_message_id, int form_id, String message, Date created_date, int created_by, Date updated_date, int updated_by) {
-        this.response_message_id = response_message_id;
-        this.form_id = form_id;
-        this.message = message;
-        this.created_date = created_date;
-        this.created_by = created_by;
-        this.updated_date = updated_date;
-        this.updated_by = updated_by;
-    }
-
     public int getResponse_message_id() {
         return response_message_id;
     }
@@ -52,6 +45,14 @@ public class ResponseMessageModel {
 
     public void setForm_id(int form_id) {
         this.form_id = form_id;
+    }
+
+    public int getForm_department_id() {
+        return form_department_id;
+    }
+
+    public void setForm_department_id(int form_department_id) {
+        this.form_department_id = form_department_id;
     }
 
     public String getMessage() {
@@ -93,6 +94,7 @@ public class ResponseMessageModel {
     public void setUpdated_by(int updated_by) {
         this.updated_by = updated_by;
     }
-    
-    
+
+    public mResponseMessage() {
+    }
 }
