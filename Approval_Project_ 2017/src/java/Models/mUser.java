@@ -18,12 +18,27 @@ public class mUser {
     private String email;
     private String password;
     private int responsible_form_type_id;
+    private String responsible_form_type_name;
     private Date created_date;
     private Date updated_date;
 
     public mUser() {
     }
 
+    public void setResponsible_form_type_name(int responsible_form_type_id){
+        String[] formTypeList = {"","Coordinator", "Supervisor","Admin","Department"};
+        if (responsible_form_type_id <= 4){
+            this.responsible_form_type_name = formTypeList[responsible_form_type_id];
+        }
+        else {
+            this.responsible_form_type_name = "Others";
+        }
+    }
+    
+    public String getResponsible_form_type_name(){
+        return responsible_form_type_name;
+    }
+    
     public int getUser_id() {
         return user_id;
     }

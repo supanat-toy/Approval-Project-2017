@@ -1,5 +1,6 @@
 
 <c:set var="userProfile" value="${userProfile}" />
+<c:set var="formTypeName" value="${userProfile.responsible_form_type_name}" />
 
 <div class="set_background_screen_2 set_margin_container_default_10">
     <div class="box_layer_info_3">
@@ -21,7 +22,7 @@
                         <li><a data-toggle="tab" href="#IT_tab">IT</a></li>
                     </ul>
                     <div class="tab_content tab-content">
-                        <form action="${pageContext.servletContext.contextPath}/Coordinator/Create" method="POST" data-parsley-validate="true">
+                        <form action="${pageContext.servletContext.contextPath}/${formTypeName}/Create" method="POST" data-parsley-validate="true">
                             <div id="Details_tab" class="tab-pane fade in active">
                                 <div class="topic">
                                     <i class="fa fa-file-text-o" aria-hidden="true"></i> Details

@@ -1,6 +1,6 @@
 
 <c:set var="userProfile" value="${userProfile}" />
-
+<c:set var="formTypeName" value="${userProfile.responsible_form_type_name}" />
 <c:set var="formDetails" value="${formDetails}" />
 
 <!-- Property -->
@@ -78,7 +78,7 @@
                             </c:if>     
                     </ul>
                     <div class="tab_content tab-content">
-                        <form action="${pageContext.servletContext.contextPath}/Coordinator/Update" method="POST" data-parsley-validate="true">
+                        <form action="${pageContext.servletContext.contextPath}/${formTypeName}/Update" method="POST" data-parsley-validate="true">
                             <div id="Details_tab" class="tab-pane fade in active">
                                 <div class="topic">
                                     <i class="fa fa-file-text-o" aria-hidden="true"></i> Details

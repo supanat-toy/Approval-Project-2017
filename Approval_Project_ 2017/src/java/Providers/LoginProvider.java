@@ -52,6 +52,7 @@ public class LoginProvider {
                    user.setPhone_number(phone_number);
                    user.setResponsible_form_type_id(responsible_form_type_id);
                    user.setUser_id(userID);
+                   user.setResponsible_form_type_name(responsible_form_type_id);
                    result.setUserProfile(user);
                    
                    break;
