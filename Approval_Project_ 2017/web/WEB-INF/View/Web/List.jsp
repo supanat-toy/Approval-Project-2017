@@ -16,9 +16,9 @@ page import="Models.*;"
         <div class="title">
             <div class="container_new">
                 <span class="topic">Request for AU Service</span>
-                <%--<c:if test="${userProfile.responsible_form_type_id == 1}">--%>
+                <c:if test="${userProfile.responsible_form_type_id == 1}">
                     <a class="set_float_right set_btn_confirm_sm_backgroundWhite" href="${pageContext.request.contextPath}/Coordinator/Create">Create new request</a>
-                <%--</c:if>--%>
+                </c:if>
             </div>
         </div>
         <div class="container_new">

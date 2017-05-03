@@ -62,21 +62,29 @@ public class LoginServlet extends HttpServlet {
             LoginProvider loginProvider = new LoginProvider();
             mResult result = loginProvider.Authorization(email, password);
             
+            
+            
+            UserProfileFunctions userProfileFunc = new UserProfileFunctions();
+            userProfileFunc.SetUserProfile(result.getUserProfile(), request);
+            
             if(result.getIsSuccess()){
-                userPath = "/WEB-INF/View/Web/Coordinator/List";
+                //userPath = "/WEB-INF/View/Web/List";
+                String[] formTypeList = {"","/Coordinator", "/Supervisor","/Admin","/Department"};
+                response.sendRedirect(request.getContextPath() + formTypeList[result.getUserProfile().getResponsible_form_type_id()]);
             }
             else {
                 userPath = "/index";
-            }
-        }
-        
-        String url = userPath + ".jsp";
+                String url = userPath + ".jsp";
 
         try {
             request.getRequestDispatcher(url).forward(request, response);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+            }
+        }
+        
+        
         
 //        try {
 //            String idToken = request.getParameter("id_token");

@@ -50,7 +50,7 @@
         <form action="${pageContext.servletContext.contextPath}/Login/Authorization" method="POST" data-parsley-validate="true">
             <div class="form_group_row">
                 <label></label>
-                <input type="text" name="email" id="form_login_email" placeholder="Email" class="form_control_textField set_text_align_center" data-parsley-required="true">
+                <input type="email" name="email" id="form_login_email" placeholder="Email" class="form_control_textField set_text_align_center" data-parsley-required="true">
             </div>
             <div class="form_group_row">
                 

@@ -21,8 +21,8 @@ public class UserProfileFunctions {
         HttpSession session = request.getSession();
         int userID = GetUserProfile(request).getUser_id();
         
-        return "1";
-        //return Integer.toString(userID);
+        //return "1";
+        return Integer.toString(userID);
     }
     
     public mUser GetUserProfile(HttpServletRequest request){
@@ -31,8 +31,8 @@ public class UserProfileFunctions {
         
         userProfile = (mUser)session.getAttribute("userProfile");
         
-        userProfile = new mUser();
-        userProfile.setUser_id(1);
+        //userProfile = new mUser();
+        //userProfile.setUser_id(1);
         
         return userProfile;
     }

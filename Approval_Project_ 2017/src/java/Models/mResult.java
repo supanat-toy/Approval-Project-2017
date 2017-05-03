@@ -12,6 +12,9 @@ package Models;
 public class mResult {
     private Boolean isSuccess;
     private String message;
+//    private int userID;
+//    private String nameProfile;
+    private mUser userProfile;
 
     public mResult() {
     }
@@ -31,6 +34,30 @@ public class mResult {
     public void setMessage(String message) {
         this.message = message;
     }
+    
+    public mUser getUserProfile() {
+        return userProfile;
+    }
+
+    public void setUserProfile(mUser user) {
+        this.userProfile = user;
+    }
+    
+//    public int getUserID(){
+//        return this.userID;
+//    }
+//    
+//    public void setUserID(int userID){
+//        this.userID = userID;
+//    }
+//    
+//    public String getNameProfile(){
+//        return this.nameProfile;
+//    }
+//    
+//    public void setNameProfile(String nameProfile){
+//        this.nameProfile = nameProfile;
+//    }
     
     
 }
