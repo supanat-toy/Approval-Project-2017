@@ -26,7 +26,9 @@ import java.util.List;
 
 @WebServlet(name = "LoginServlet", 
         loadOnStartup = 1,
-        urlPatterns = {""})
+        urlPatterns = { "", 
+                            "/Login/Authorization", 
+        })
 public class LoginServlet extends HttpServlet {
 
     LoginProvider loginProvider = new LoginProvider();
@@ -51,6 +53,31 @@ public class LoginServlet extends HttpServlet {
         
         response.setContentType("text/html");
 
+        String userPath = request.getServletPath();
+        
+        if (userPath.equals("/Login/Authorization")) {
+            String email = request.getParameter("email");
+            String password = request.getParameter("password");
+            
+            LoginProvider loginProvider = new LoginProvider();
+            mResult result = loginProvider.Authorization(email, password);
+            
+            if(result.getIsSuccess()){
+                userPath = "/WEB-INF/View/Web/Coordinator/List";
+            }
+            else {
+                userPath = "/index";
+            }
+        }
+        
+        String url = userPath + ".jsp";
+
+        try {
+            request.getRequestDispatcher(url).forward(request, response);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
+        
 //        try {
 //            String idToken = request.getParameter("id_token");
 //            GoogleIdToken.Payload payLoad = IdTokenVerifierAndParser.getPayload(idToken);

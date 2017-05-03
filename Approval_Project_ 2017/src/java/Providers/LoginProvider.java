@@ -21,14 +21,14 @@ public class LoginProvider {
     
     public final int COORDINATOR = 1, SUPERVISOR = 2, ADMIN = 3, PROPERTIES = 4, TECHNICAL = 5, SOUNDANDLIGHT = 6, ARTSANDCULTURE = 7, SECURITY = 8, IT = 9;
     
-    public mResult Authorization(String username, String password) {
+    public mResult Authorization(String email, String password) {
         mResult result = new mResult();
         
-        String queryStatement = "select password user where user.username=?";
+        String queryStatement = "select password from user where email=?";
         String query_password = "";
         try{
             PreparedStatement ps = DBUtils.getPreparedStatement(queryStatement);
-            ps.setString(1, username);
+            ps.setString(1, email);
             //ps.setString(2, password);
             
             ResultSet queryResult = ps.executeQuery();
@@ -42,11 +42,11 @@ public class LoginProvider {
             e.printStackTrace();
         }
     
-        if (query_password == ""){
+        if (query_password.equals("")){
             result.setIsSuccess(false);
             result.setMessage("Username is wrong");
         }
-        else if (query_password != password){
+        else if (query_password.equals(password)){
             result.setIsSuccess(false);
             result.setMessage("Password is wrong");
         }

@@ -133,7 +133,7 @@
                             </div>
 
 
-                            <%--                
+                                           
         <div id="Properties_tab" class="tab-pane fade">
             <div class="topic">
                 <i class="fa fa-file-text-o" aria-hidden="true"></i> Properties
@@ -710,7 +710,7 @@
                                 <div class="col_percent_4"></div>
                             </div>
                         </div>
-                            --%>
+                           
                         </form>
                     </div>
                 </div>
