@@ -26,7 +26,7 @@ import java.util.List;
 
 @WebServlet(name = "LoginServlet", 
         loadOnStartup = 1,
-        urlPatterns = {"/"})
+        urlPatterns = {""})
 public class LoginServlet extends HttpServlet {
 
     LoginProvider loginProvider = new LoginProvider();
