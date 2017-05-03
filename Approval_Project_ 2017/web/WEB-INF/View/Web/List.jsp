@@ -46,9 +46,26 @@ page import="Models.*;"
                                                     </div>
                                                     <div class="set_float_right">
                                                         <div class="box_status_instructor">
-                                                            <span class="icon_status approved">
-                                                                <i class="fa fa-check" aria-hidden="true"></i>
-                                                            </span>
+                                                            <!--
+                                                            <c:if test="">
+                                                                <span class="icon_status rejected">
+                                                                    <i class="fa fa-times" aria-hidden="true"></i>
+                                                                </span>
+                                                            </c:if>
+                                                            <c:if test="" >
+                                                                <span class="icon_status approved">
+                                                                    <i class="fa fa-check" aria-hidden="true"></i>
+                                                                </span>
+                                                            </c:if>
+                                                            <c:if test="">
+                                                                <span class="icon_status pending">
+                                                                    <i class="fa fa-question" aria-hidden="true"></i>
+                                                                </span>
+                                                            </c:if>
+                                                            -->
+                                                            <span class="icon_status pending">
+                                                                    <i class="fa fa-question" aria-hidden="true"></i>
+                                                                </span>
                                                             <div class="box_instructor_info">
                                                                 <span class="title">Responded by</span>
                                                                 <span class="instructor_name">${formDisplay.latest_response}</span>

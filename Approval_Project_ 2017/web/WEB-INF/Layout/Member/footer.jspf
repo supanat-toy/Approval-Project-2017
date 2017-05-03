@@ -5,10 +5,11 @@
 
 
 
-    <script src="${pageContext.request.contextPath}/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="${pageContext.request.contextPath}/Scripts/Tools/jquery-ui/ui/minified/jquery-ui.min.js"></script>
-    <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/plugins/metisMenu/jquery.metisMenu.js" type="text/javascript"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/bootstrap.min.js" type="text/javascript"></script>
+    
+    <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/plugins/metisMenu/jquery.metisMenu.js" type="text/javascript"></script>
     <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/plugins/slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
     <!-- Custom and plugin javascript -->
     <script src="${pageContext.request.contextPath}/Scripts/Tools/MenuSideBar/inspinia.js" type="text/javascript"></script>

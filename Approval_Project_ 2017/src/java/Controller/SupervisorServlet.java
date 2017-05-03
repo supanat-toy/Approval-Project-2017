@@ -15,8 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import Functions.*;
 import Models.*;
 import Providers.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -82,7 +85,18 @@ public class SupervisorServlet extends HttpServlet {
             
             userPath = "/Details";
         }
-
+        else if (userPath.equals("/Supervisor/Status")){
+            int id = Integer.parseInt(request.getParameter("id"));
+            Boolean isApprove = Boolean.valueOf(request.getParameter("isApprove"));
+            
+            DetailsProvider detailsProvider = new DetailsProvider();
+            try {
+                mResult result = detailsProvider.ApprovedForm(userProfile.getUser_id(), userProfile.getResponsible_form_type_id(), id, isApprove);
+            } catch (SQLException ex) {
+                Logger.getLogger(AdminDirectorServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            response.sendRedirect(request.getContextPath() + "/Supervisor");
+        }
 
         String url = "/WEB-INF/View/Web" + userPath + ".jsp";
 

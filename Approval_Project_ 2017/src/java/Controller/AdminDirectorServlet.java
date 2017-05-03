@@ -15,8 +15,11 @@ import javax.servlet.http.HttpServletResponse;
 import Functions.*;
 import Models.*;
 import Providers.*;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author supanattechasothon
@@ -81,6 +84,18 @@ public class AdminDirectorServlet extends HttpServlet {
             request.setAttribute("responseMessageList_6", responseMessageList);
             
             userPath = "/Details";
+        }
+        else if (userPath.equals("/AdminDirector/Status")){
+            int id = Integer.parseInt(request.getParameter("id"));
+            Boolean isApprove = Boolean.valueOf(request.getParameter("isApprove"));
+            
+            DetailsProvider detailsProvider = new DetailsProvider();
+            try {
+                mResult result = detailsProvider.ApprovedForm(userProfile.getUser_id(), userProfile.getResponsible_form_type_id(), id, isApprove);
+            } catch (SQLException ex) {
+                Logger.getLogger(AdminDirectorServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            response.sendRedirect(request.getContextPath() + "/AdminDirector");
         }
 
 

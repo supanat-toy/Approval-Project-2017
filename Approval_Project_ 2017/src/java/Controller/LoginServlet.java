@@ -70,7 +70,7 @@ public class LoginServlet extends HttpServlet {
             if(result.getIsSuccess()){
                 //userPath = "/WEB-INF/View/Web/List";
                 String[] formTypeList = {"","/Coordinator", "/Supervisor","/Admin","/Department"};
-                response.sendRedirect(request.getContextPath() + formTypeList[result.getUserProfile().getResponsible_form_type_id()]);
+                response.sendRedirect(request.getContextPath() + "/" + result.getUserProfile().getResponsible_form_type_name());
             }
             else {
                 userPath = "/index";
