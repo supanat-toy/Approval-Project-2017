@@ -9,6 +9,7 @@ import DBConnection.DBUtils;
 import Functions.TimeConverter;
 import Models.mForm;
 import Models.mFormDepartment;
+import Models.mItem;
 import Models.mRequestedItem;
 import Models.mResponseMessage;
 import Models.mResult;
@@ -366,6 +367,27 @@ public class DetailsProvider {
 
         //---------------
         return requestedItemList;
+    }
+    
+    public List<mItem> getDepartmentItem(int form_department_id){
+        List<mItem> items = new ArrayList<mItem>();
+        String queryStatement = "select * from item where item.form_type_id=?";
+        try{
+            PreparedStatement ps = DBUtils.getPreparedStatement(queryStatement);
+            ps.setInt(1, form_department_id);
+            ResultSet queryResult = ps.executeQuery();
+            
+            while (queryResult.next()) {
+                int item_id = queryResult.getInt("item_id");
+                String image = queryResult.getString("image");
+                String name = queryResult.getString("name");
+                mItem item = new mItem(item_id, image, name);
+                items.add(item);
+            }
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+        return items;
     }
 
 }

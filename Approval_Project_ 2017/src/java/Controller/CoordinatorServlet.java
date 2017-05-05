@@ -54,7 +54,27 @@ public class CoordinatorServlet extends HttpServlet {
             request.setAttribute("formDisplayList", formDisplayList);
           
         } else if (userPath.equals("/Coordinator/Create")) {
+            List<mItem> items = detailsProvider.getDepartmentItem(4);
+            List<mItem> tables = new ArrayList<mItem>();
+            List<mItem> chairs = new ArrayList<mItem>();
+            List<mItem> boards = new ArrayList<mItem>();
+            List<mItem> table_cloths = new ArrayList<mItem>();
             
+            tables.add(items.get(0));
+            tables.add(items.get(1));
+            
+            chairs.add(items.get(2));
+            chairs.add(items.get(3));
+            
+            boards.add(items.get(4));
+            
+            table_cloths.add(items.get(5));
+            table_cloths.add(items.get(6));
+            
+            request.setAttribute("tables", tables);
+            request.setAttribute("chairs", chairs);
+            request.setAttribute("boards", boards);
+            request.setAttribute("table_cloths", table_cloths);
             userPath = "/Create";
             
         } else if (userPath.equals("/Coordinator/Details")) {

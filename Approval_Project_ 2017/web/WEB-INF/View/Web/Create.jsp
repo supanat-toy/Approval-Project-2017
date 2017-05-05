@@ -134,72 +134,52 @@
                             </div>
 
 
-                                           
-        <div id="Properties_tab" class="tab-pane fade">
-            <div class="topic">
-                <i class="fa fa-file-text-o" aria-hidden="true"></i> Properties
-            </div>
-            <div class="details">
-                <div class="col_percent_8 set_padding_right_15">
-             
-                        <div class="form_group_row set_background_for_item">
-                            <label>Table</label>
-                            <div class="box_choice_itemList">
-                               
-                                        <div class="box_each_item">
-                                            <div class="box_image_item">
-                                                <img src="/Images/1_Properties/FoldingTableWhite.jpg" alt=""/>
-                                            </div>
-                                            <div class="box_info_item">
-                                                <span class="item_name">Folding Table White</span>
-                                                <div class="box_item_input">
-                                                    <input name="1_FoldingTableWhite" class="input_item_quanlity form_control_textField" />
-                                                    <span class="item_unit">pcs.</span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                   <div class="box_each_item">
-                                            <div class="box_image_item">
-                                                 <img src="/Images/1_Properties/FoldingTableRoundWhite.jpg" alt=""/>
-                                            </div>
-                                            <div class="box_info_item">
-                                                <span class="item_name">Folding Table Round White</span>
-                                                <div class="box_item_input">
-                                                    <input name="1_FoldingTableRoundWhite" class="input_item_quanlity form_control_textField" />
-                                                    <span class="item_unit">pcs.</span>
-                                                </div>
-                                            </div>
-                                        </div>
+
+                            <div id="Properties_tab" class="tab-pane fade">
+                                <div class="topic">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Properties
+                                </div>
+                                <div class="details">
+                                    <div class="col_percent_8 set_padding_right_15">
+
+                                        <div class="form_group_row set_background_for_item">
+                                            <label>Table</label>
+                                            <div class="box_choice_itemList">
+
+                                                <c:forEach var="table" items="${tables}">
+                                                    <div class="box_each_item">
+                                                        <div class="box_image_item">
+                                                            <img src="${table.image}" alt=""/>
+                                                        </div>
+                                                        <div class="box_info_item">
+                                                            <span class="item_name">${table.name}</span>
+                                                            <div class="box_item_input">
+                                                                <input name="items" value="0" class="input_item_quanlity form_control_textField" />
+                                                                <span class="item_unit">pcs.</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </c:forEach>
 
                                             </div>
                                         </div>
                                         <div class="form_group_row set_background_for_item">
                                             <label>Chair</label>
                                             <div class="box_choice_itemList">
-                                                <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                <img src="${pageContext.request.contextPath}/Images/1_Properties/ChairCrown.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Chair Crown</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="1_ChairCrown" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
+                                                <c:forEach var="chair" items="${chairs}">
+                                                    <div class="box_each_item">
+                                                        <div class="box_image_item">
+                                                            <img src="${chair.image}" alt=""/>
+                                                        </div>
+                                                        <div class="box_info_item">
+                                                            <span class="item_name">${chair.name}</span>
+                                                            <div class="box_item_input">
+                                                                <input name="items" value="0" class="input_item_quanlity form_control_textField" />
+                                                                <span class="item_unit">pcs.</span>
                                                             </div>
                                                         </div>
-                                                   <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/1_Properties/ChairSteel.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Chair Steel</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="1_ChairSteel" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    </div>
+                                                </c:forEach>
 
                                             </div>
                                         </div>
@@ -207,49 +187,40 @@
                                         <div class="form_group_row set_background_for_item">
                                             <label>Board</label>
                                             <div class="box_choice_itemList">
-                                                <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/1_Properties/BoardMoveable.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Board Moveable</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="1_BoardMoveable" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
+                                                <c:forEach var="board" items="#{boards}">
+                                                    <div class="box_each_item">
+                                                        <div class="box_image_item">
+                                                            <img src="${board.image}" alt=""/>
+                                                        </div>
+                                                        <div class="box_info_item">
+                                                            <span class="item_name">${board.name}</span>
+                                                            <div class="box_item_input">
+                                                                <input name="items" value="0" class="input_item_quanlity form_control_textField" />
+                                                                <span class="item_unit">pcs.</span>
                                                             </div>
                                                         </div>
-                                               
-
+                                                    </div>
+                                                </c:forEach>
                                             </div>
                                         </div>
                                         <div class="form_group_row set_background_for_item">
                                             <label>Tablecloth</label>
                                             <div class="box_choice_itemList">
-                                                <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/1_Properties/TableClothBlue.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Table Cloth Blue</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="1_TableClothBlue" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
+
+                                                <c:forEach var="table_cloth" items="${table_cloths}">
+                                                    <div class="box_each_item">
+                                                        <div class="box_image_item">
+                                                            <img src="${table_cloth.image}" alt=""/>
+                                                        </div>
+                                                        <div class="box_info_item">
+                                                            <span class="item_name">${table_cloth.name}</span>
+                                                            <div class="box_item_input">
+                                                                <input name="item" value="0" class="input_item_quanlity form_control_textField" />
+                                                                <span class="item_unit">pcs.</span>
                                                             </div>
                                                         </div>
-                                                <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/1_Properties/TableClothRound.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Table Cloth Round</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="1_TableClothRound" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
+                                                    </div>
+                                                </c:forEach>
 
                                             </div>
                                         </div>
@@ -261,92 +232,92 @@
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
-                                    
+
+                                    </div>
+                                    <div class="col_percent_4"></div>
                                 </div>
-                                <div class="col_percent_4"></div>
                             </div>
-                        </div>
-                        <div id="Technical_tab" class="tab-pane fade">
-                            <div class="topic">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> Technical
-                            </div>
-                            <div class="details">
-                                <div class="col_percent_8 set_padding_right_15">
-                                   
+                            <div id="Technical_tab" class="tab-pane fade">
+                                <div class="topic">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Technical
+                                </div>
+                                <div class="details">
+                                    <div class="col_percent_8 set_padding_right_15">
+
                                         <div class="form_group_row set_background_for_item">
                                             <label>Electricity</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/ExtensionCordsLenght.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Extension Cords Lenght</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_ExtensionCordsLenght" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/ExtensionCordsLenght.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Extension Cords Lenght</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_ExtensionCordsLenght" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/ExtensionCordsRoll.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">ExtensionCordsRoll</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_ExtensionCordsRoll" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/ExtensionCordsRoll.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">ExtensionCordsRoll</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_ExtensionCordsRoll" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form_group_row set_background_for_item">
                                             <label>Microphone</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/MicrophoneWithShortStand.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Microphone With Short Stand</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_MicrophoneWithShortStand" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/MicrophoneWithShortStand.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Microphone With Short Stand</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_MicrophoneWithShortStand" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
-                                                        <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/MicrophoneWithStand.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Microphone With Stand</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_MicrophoneWithStand" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/MicrophoneWithStand.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Microphone With Stand</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_MicrophoneWithStand" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
 
                                         <div class="form_group_row set_background_for_item">
                                             <label>Telephone</label>
                                             <div class="box_choice_itemList">
-                                               <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/PhoneOfficeWhite.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Phone Office</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_PhoneOfficeWhite" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/PhoneOfficeWhite.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Phone Office</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_PhoneOfficeWhite" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -354,17 +325,17 @@
                                             <label>Air conditioners</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/AirConditioner.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Air Conditioner</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_AirConditioner" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/AirConditioner.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Air Conditioner</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_AirConditioner" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -372,29 +343,29 @@
                                             <label>Sound</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/sound1.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">sound1</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_sound1" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/sound1.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">sound1</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_sound1" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
-                                                        <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/2_Technical/sound2.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">sound2</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="2_sound2" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/2_Technical/sound2.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">sound2</span>
+                                                        <div class="box_item_input">
+                                                            <input name="2_sound2" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -406,74 +377,74 @@
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
-                                    
+
+                                    </div>
+                                    <div class="col_percent_4"></div>
                                 </div>
-                                <div class="col_percent_4"></div>
                             </div>
-                        </div>
-                        <div id="SoundLight_tab" class="tab-pane fade">
-                            <div class="topic">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> Sound & Light
-                            </div>
-                            <div class="details">
-                                <div class="col_percent_8 set_padding_right_15">
-                                   
+                            <div id="SoundLight_tab" class="tab-pane fade">
+                                <div class="topic">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Sound & Light
+                                </div>
+                                <div class="details">
+                                    <div class="col_percent_8 set_padding_right_15">
+
                                         <div class="form_group_row set_background_for_item">
                                             <label>Microphone</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/MicrophoneWithShortStand.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Microphone With Short Stand</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="3_MicrophoneWithShortStand" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/MicrophoneWithShortStand.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Microphone With Short Stand</span>
+                                                        <div class="box_item_input">
+                                                            <input name="3_MicrophoneWithShortStand" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
-                                                        <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/MicrophoneWithStand.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Microphone With Stand</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="3_MicrophoneWithStand" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/MicrophoneWithStand.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Microphone With Stand</span>
+                                                        <div class="box_item_input">
+                                                            <input name="3_MicrophoneWithStand" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form_group_row set_background_for_item">
                                             <label>Projector</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/Projector.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Projector</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="3_Projector" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/Projector.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Projector</span>
+                                                        <div class="box_item_input">
+                                                            <input name="3_Projector" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
-                                                        <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/ProjectorScreen01.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Projector Screen</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="3_ProjectorScreen" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    </div>
+                                                </div>
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/3_Sound & Light/ProjectorScreen01.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Projector Screen</span>
+                                                        <div class="box_item_input">
+                                                            <input name="3_ProjectorScreen" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="form_group_row">
@@ -484,33 +455,33 @@
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
-                                    
+
+                                    </div>
+                                    <div class="col_percent_4"></div>
                                 </div>
-                                <div class="col_percent_4"></div>
                             </div>
-                        </div>
-                        <div id="ArtsCulture_tab" class="tab-pane fade">
-                            <div class="topic">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> Arts & Culture
-                            </div>
-                            <div class="details">
-                                <div class="col_percent_8 set_padding_right_15">
-                                   
+                            <div id="ArtsCulture_tab" class="tab-pane fade">
+                                <div class="topic">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Arts & Culture
+                                </div>
+                                <div class="details">
+                                    <div class="col_percent_8 set_padding_right_15">
+
                                         <div class="form_group_row set_background_for_item">
                                             <label>Foam</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/4_Arts & Culture/FoamLetters.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Foam Letters</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="4_FoamLetters" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/4_Arts & Culture/FoamLetters.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Foam Letters</span>
+                                                        <div class="box_item_input">
+                                                            <input name="4_FoamLetters" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -518,17 +489,17 @@
                                             <label>Guide post</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/4_Arts & Culture/DirectionSign.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Direction Sign</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="4_DirectionSign" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/4_Arts & Culture/DirectionSign.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Direction Sign</span>
+                                                        <div class="box_item_input">
+                                                            <input name="4_DirectionSign" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -540,33 +511,33 @@
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
-                                    
+
+                                    </div>
+                                    <div class="col_percent_4"></div>
                                 </div>
-                                <div class="col_percent_4"></div>
                             </div>
-                        </div>
-                        <div id="Security_tab" class="tab-pane fade">
-                            <div class="topic">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> Security
-                            </div>
-                            <div class="details">
-                                <div class="col_percent_8 set_padding_right_15">
-                                
+                            <div id="Security_tab" class="tab-pane fade">
+                                <div class="topic">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i> Security
+                                </div>
+                                <div class="details">
+                                    <div class="col_percent_8 set_padding_right_15">
+
                                         <div class="form_group_row set_background_for_item">
                                             <label>Parking place</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/5_Security/ParkingArea.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Parking Area</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="5_ParkingArea" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/5_Security/ParkingArea.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Parking Area</span>
+                                                        <div class="box_item_input">
+                                                            <input name="5_ParkingArea" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -574,17 +545,17 @@
                                             <label>Security Officer</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/5_Security/SecurityOfficer.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Security guard</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="5_SecurityOfficer" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/5_Security/SecurityOfficer.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Security guard</span>
+                                                        <div class="box_item_input">
+                                                            <input name="5_SecurityOfficer" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -596,51 +567,51 @@
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
-                                    
+
+                                    </div>
+                                    <div class="col_percent_4"></div>
                                 </div>
-                                <div class="col_percent_4"></div>
                             </div>
-                        </div>
-                        <div id="IT_tab" class="tab-pane fade">
-                            <div class="topic">
-                                <i class="fa fa-file-text-o" aria-hidden="true"></i> IT
-                            </div>
-                            <div class="details">
-                                <div class="col_percent_8 set_padding_right_15">
-                                  
+                            <div id="IT_tab" class="tab-pane fade">
+                                <div class="topic">
+                                    <i class="fa fa-file-text-o" aria-hidden="true"></i> IT
+                                </div>
+                                <div class="details">
+                                    <div class="col_percent_8 set_padding_right_15">
+
                                         <div class="form_group_row set_background_for_item">
                                             <label>LCD Projector</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/6_IT/Projector01.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Projector</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="6_Projector" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/6_IT/Projector01.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Projector</span>
+                                                        <div class="box_item_input">
+                                                            <input name="6_Projector" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
-                                                                    
+                                                    </div>
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="form_group_row set_background_for_item">
                                             <label>Notebook</label>
                                             <div class="box_choice_itemList">
-                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/6_IT/Laptop01.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Laptop</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="6_Laptop" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>   
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/6_IT/Laptop01.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Laptop</span>
+                                                        <div class="box_item_input">
+                                                            <input name="6_Laptop" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
+                                                        </div>
+                                                    </div>
+                                                </div>   
 
                                             </div>
                                         </div>
@@ -649,35 +620,35 @@
                                             <label>Computer</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/6_IT/Computer01.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Computer</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="6_Computer" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
-                                                        </div> 
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/6_IT/Computer01.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Computer</span>
+                                                        <div class="box_item_input">
+                                                            <input name="6_Computer" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
+                                                        </div>
+                                                    </div>
+                                                </div> 
 
                                             </div>
                                         </div>
                                         <div class="form_group_row set_background_for_item">
                                             <label>Visualizer</label>
                                             <div class="box_choice_itemList">
-                                               <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/6_IT/Visualizer.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Visualizer</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="6_Visualizer" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                <div class="box_each_item">
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/6_IT/Visualizer.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Visualizer</span>
+                                                        <div class="box_item_input">
+                                                            <input name="6_Visualizer" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -685,17 +656,17 @@
                                             <label>Screen</label>
                                             <div class="box_choice_itemList">
                                                 <div class="box_each_item">
-                                                            <div class="box_image_item">
-                                                                 <img src="${pageContext.request.contextPath}/Images/6_IT/ProjectorScreen01.jpg" alt=""/>
-                                                            </div>
-                                                            <div class="box_info_item">
-                                                                <span class="item_name">Projector Screen</span>
-                                                                <div class="box_item_input">
-                                                                    <input name="6_ProjectorScreen" class="input_item_quanlity form_control_textField" />
-                                                                    <span class="item_unit">pcs.</span>
-                                                                </div>
-                                                            </div>
+                                                    <div class="box_image_item">
+                                                        <img src="${pageContext.request.contextPath}/Images/6_IT/ProjectorScreen01.jpg" alt=""/>
+                                                    </div>
+                                                    <div class="box_info_item">
+                                                        <span class="item_name">Projector Screen</span>
+                                                        <div class="box_item_input">
+                                                            <input name="6_ProjectorScreen" class="input_item_quanlity form_control_textField" />
+                                                            <span class="item_unit">pcs.</span>
                                                         </div>
+                                                    </div>
+                                                </div>
 
                                             </div>
                                         </div>
@@ -707,11 +678,11 @@
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
+                                    </div>
+                                    <div class="col_percent_4"></div>
                                 </div>
-                                <div class="col_percent_4"></div>
                             </div>
-                        </div>
-                           
+
                         </form>
                     </div>
                 </div>
