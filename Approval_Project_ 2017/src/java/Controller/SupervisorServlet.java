@@ -28,7 +28,8 @@ import java.util.logging.Logger;
 @WebServlet(name="Supervisor", 
             loadOnStartup = 1,
             urlPatterns = { "/Supervisor", 
-                            "/Supervisor/Details"
+                            "/Supervisor/Details",
+                            "/Supervisor/Status"
 })
 public class SupervisorServlet extends HttpServlet {
 
@@ -47,7 +48,7 @@ public class SupervisorServlet extends HttpServlet {
        
         if (userPath.equals("/Supervisor")) {
             userPath = "/List";
-            List<mFormDisplay> formDisplayList = listProvider.getForms(userProfile.getUser_id());
+            List<mFormDisplay> formDisplayList = listProvider.getForms();
             request.setAttribute("formDisplayList", formDisplayList);
             
         }
@@ -121,6 +122,19 @@ public class SupervisorServlet extends HttpServlet {
             
         } else if (userPath.equals("/Supervisor/Details")) {
             
+        }
+        
+        else if (userPath.equals("/Supervisor/Status")){
+            int id = Integer.parseInt(request.getParameter("id"));
+            Boolean isApprove = Boolean.valueOf(request.getParameter("isApprove"));
+            
+            DetailsProvider detailsProvider = new DetailsProvider();
+            try {
+                mResult result = detailsProvider.ApprovedForm(userProfile.getUser_id(), userProfile.getResponsible_form_type_id(), id, isApprove);
+            } catch (SQLException ex) {
+                Logger.getLogger(AdminDirectorServlet.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            response.sendRedirect(request.getContextPath() + "/Supervisor");
         }
 
 

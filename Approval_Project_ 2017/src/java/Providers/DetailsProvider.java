@@ -34,6 +34,7 @@ public class DetailsProvider {
         try {
             ResultSet result = DBUtils.getPreparedStatement("select * from form where form.form_id = " + form_id).executeQuery();
             while (result.next()) {
+                form.setForm_id(result.getInt("form_id"));
                 form.setEvent_name(result.getString("event_name"));
                 form.setActivity(result.getString("activity"));
                 form.setDepartment(result.getString("department"));
@@ -173,7 +174,7 @@ public class DetailsProvider {
                 ps.setTimestamp(4, tc.dateStringtoDate(timestamp));
                 ps.setInt(5, user_id);
                 ps.setInt(6, form_id);
-                ps.execute();
+                ps.executeUpdate();
             } else if (responsible_form_type_id == 3) { // approve by admin
                 String queryStatement = "update form set is_approved_admin = ?,"
                         + "approved_date_admin = ?,"
@@ -189,7 +190,7 @@ public class DetailsProvider {
                 ps.setTimestamp(4, tc.dateStringtoDate(timestamp));
                 ps.setInt(5, user_id);
                 ps.setInt(6, form_id);
-                ps.execute();
+                ps.executeUpdate();
             }
             result.setIsSuccess(true);
             result.setMessage("Approved successfully");

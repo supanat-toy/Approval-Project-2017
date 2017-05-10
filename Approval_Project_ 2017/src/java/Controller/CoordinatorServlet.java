@@ -168,7 +168,7 @@ public class CoordinatorServlet extends HttpServlet {
             new_form.setPreparing_date(preparing_date + " " + preparing_time);
             //System.out.println(preparing_date + " " + preparing_time);
             //Starting date
-            new_form.setStarting_date(starting_date + " " + starting_time);
+            new_form.setStarting_date(starting_date + " " + starting_time.split(" ")[0]);
             
             new_form.setCoordinator_name(coordinator_name);
             new_form.setCoordinator_phone_number(coordinator_phone_number);
@@ -176,12 +176,13 @@ public class CoordinatorServlet extends HttpServlet {
             
             new_form.setCreated_by(id);
             new_form.setUpdated_by(id);
-            int i = 0;
+            
             mResult result = createProvider.submitRequest(new_form);
             
             if(result.getIsSuccess()){
-                userPath = "/Coordinator/List";
+                response.sendRedirect(request.getContextPath() + "/Coordinator");
             }
+//            userPath = "/Coordinator/List";
             
         } else if (userPath.equals("/Coordinator/Details")) {
             int form_id = Integer.parseInt(request.getParameter("id"));

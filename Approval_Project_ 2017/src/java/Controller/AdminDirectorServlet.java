@@ -27,7 +27,8 @@ import java.util.logging.Logger;
 @WebServlet(name="AdminDirector", 
             loadOnStartup = 1,
             urlPatterns = { "/AdminDirector", 
-                            "/AdminDirector/Details"
+                            "/AdminDirector/Details",
+                            "/AdminDirector/Status"
 })
 public class AdminDirectorServlet extends HttpServlet {
 
@@ -47,7 +48,7 @@ public class AdminDirectorServlet extends HttpServlet {
        
         if (userPath.equals("/AdminDirector")) {
             userPath = "/List";
-            List<mFormDisplay> formDisplayList = listProvider.getForms(userProfile.getUser_id());
+            List<mFormDisplay> formDisplayList = listProvider.getFormsAdmin();
             request.setAttribute("formDisplayList", formDisplayList);
             
         } else if (userPath.equals("/AdminDirector/Details")) {

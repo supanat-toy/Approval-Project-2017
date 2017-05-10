@@ -58,7 +58,7 @@ public class LoginServlet extends HttpServlet {
         if (userPath.equals("/Login/Authorization")) {
             String email = request.getParameter("email");
             String password = request.getParameter("password");
-            
+                
             LoginProvider loginProvider = new LoginProvider();
             mResult result = loginProvider.Authorization(email, password);
             

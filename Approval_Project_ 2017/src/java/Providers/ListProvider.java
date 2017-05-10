@@ -54,6 +54,72 @@ public class ListProvider {
         }
         return forms;
     }
+    public List<mFormDisplay> getForms() {
+        List<mFormDisplay> forms = new ArrayList<mFormDisplay>();
+        try {
+            ResultSet result = DBUtils.getPreparedStatement("select * from form where form.is_delete = false order by form.updated_date desc").executeQuery();
+            while (result.next()) {
+                mFormDisplay form = new mFormDisplay();
+                int form_id = result.getInt("form_id");
+                form.setForm_id(form_id);
+                form.setEvent_name(result.getString("event_name"));
+                form.setActivity(result.getString("activity"));
+                form.setDepartment(result.getString("department"));
+                form.setStarting_date(result.getDate("starting_date"));
+                form.setCoordinator_name(result.getString("coordinator_name"));
+                form.setCoordinator_phone_number(result.getString("coordinator_phone_number"));
+                boolean is_approved_supervisor = result.getBoolean("is_approved_supervisor");
+                boolean is_approved_admin = result.getBoolean("is_approved_admin");
+                form.setAdmin_progress(is_approved_admin);
+                form.setSupervisor_progress(is_approved_supervisor);
+                form.setDepartment_progress(getDepartmentProgress(form_id));
+                int supervisor_id = result.getInt("approved_by_supervisor");
+                int admin_id = result.getInt("approved_by_admin");
+                if(is_approved_admin){
+                    form.setLatest_response(userProvider.getUserName(admin_id));
+                }else if(is_approved_supervisor){
+                    form.setLatest_response(userProvider.getUserName(supervisor_id));
+                }
+                forms.add(form);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return forms;
+    }
+    public List<mFormDisplay> getFormsAdmin() {
+        List<mFormDisplay> forms = new ArrayList<mFormDisplay>();
+        try {
+            ResultSet result = DBUtils.getPreparedStatement("select * from form where form.is_delete = false and form.is_approved_supervisor = true order by form.updated_date desc").executeQuery();
+            while (result.next()) {
+                mFormDisplay form = new mFormDisplay();
+                int form_id = result.getInt("form_id");
+                form.setForm_id(form_id);
+                form.setEvent_name(result.getString("event_name"));
+                form.setActivity(result.getString("activity"));
+                form.setDepartment(result.getString("department"));
+                form.setStarting_date(result.getDate("starting_date"));
+                form.setCoordinator_name(result.getString("coordinator_name"));
+                form.setCoordinator_phone_number(result.getString("coordinator_phone_number"));
+                boolean is_approved_supervisor = result.getBoolean("is_approved_supervisor");
+                boolean is_approved_admin = result.getBoolean("is_approved_admin");
+                form.setAdmin_progress(is_approved_admin);
+                form.setSupervisor_progress(is_approved_supervisor);
+                form.setDepartment_progress(getDepartmentProgress(form_id));
+                int supervisor_id = result.getInt("approved_by_supervisor");
+                int admin_id = result.getInt("approved_by_admin");
+                if(is_approved_admin){
+                    form.setLatest_response(userProvider.getUserName(admin_id));
+                }else if(is_approved_supervisor){
+                    form.setLatest_response(userProvider.getUserName(supervisor_id));
+                }
+                forms.add(form);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return forms;
+    }
     public mResponse getLatestResponse(int form_id) {
         mResponse latest_response = new mResponse();
         List<mResponse> responses = new ArrayList<mResponse>();
