@@ -27,11 +27,11 @@ public class mUser {
 
     public void setResponsible_form_type_name(int responsible_form_type_id){
         String[] formTypeList = {"","Coordinator", "Supervisor","AdminDirector","Department"};
-        if (responsible_form_type_id <= 4){
+        if (responsible_form_type_id <= 3){
             this.responsible_form_type_name = formTypeList[responsible_form_type_id];
         }
         else {
-            this.responsible_form_type_name = "Others";
+            this.responsible_form_type_name = "Department";
         }
     }
     
