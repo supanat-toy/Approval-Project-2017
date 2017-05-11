@@ -63,9 +63,9 @@ page import="Models.*;"
                                                                 </span>
                                                             </c:if>
                                                             -->
-                                                            <span class="icon_status pending">
+<!--                                                            <span class="icon_status pending">
                                                                     <i class="fa fa-question" aria-hidden="true"></i>
-                                                                </span>
+                                                                </span>-->
                                                             <div class="box_instructor_info">
                                                                 <span class="title">Responded by</span>
                                                                 <span class="instructor_name">${formDisplay.latest_response}</span>
@@ -89,21 +89,47 @@ page import="Models.*;"
                                                     </div>
                                                     <div class="set_float_right">
                                                         <ol class="progress progress--small">
+                                                            
                                                             <li class="is-complete">
                                                                 <span class="title_progress_bar">Coordinator</span>
                                                             </li>
-                                                            <li class="is-active">
-                                                                <span class="title_progress_bar">Supervisor</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="title_progress_bar">Administrative Director</span>
-                                                            </li>
-                                                            <li class="">
-                                                                <span class="title_progress_bar">Department</span>
-                                                            </li>
-                                                            <li class="progress__last">
-                                                                <span class="title_progress_bar">Done</span>
-                                                            </li>
+                                                            <c:if test="${formDisplay.supervisor_progress == true}">
+                                                                <li class="is-complete">
+                                                                    <span class="title_progress_bar">Supervisor</span>
+                                                                </li>
+                                                            </c:if>
+                                                            <c:if test="${formDisplay.supervisor_progress == false}">
+                                                                <li class="">
+                                                                    <span class="title_progress_bar">Supervisor</span>
+                                                                </li>
+                                                            </c:if>
+                                                            <c:if test="${formDisplay.admin_progress == true}">
+                                                                <li class="is-complete">
+                                                                    <span class="title_progress_bar">Administrative Director</span>
+                                                                </li>
+                                                            </c:if>
+                                                            <c:if test="${formDisplay.admin_progress == false}">
+                                                                <li class="">
+                                                                    <span class="title_progress_bar">Administrative Director</span>
+                                                                </li>
+                                                            </c:if>
+                                                            <c:if test="${formDisplay.department_progress == true}">
+                                                                <li class="is-complete">
+                                                                    <span class="title_progress_bar">Department</span>
+                                                                </li>
+                                                                <li class="is-complete progress__last">
+                                                                    <span class="title_progress_bar">Done</span>
+                                                                </li>
+                                                            </c:if>
+                                                            <c:if test="${formDisplay.department_progress == false}">
+                                                                <li class="">
+                                                                    <span class="title_progress_bar">Department</span>
+                                                                </li>
+                                                                <li class="progress__last">
+                                                                    <span class="title_progress_bar">Done</span>
+                                                                </li>
+                                                            </c:if>
+                   
                                                         </ol>
                                                     </div>
                                                 </div>
