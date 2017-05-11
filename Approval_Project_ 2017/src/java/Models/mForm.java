@@ -22,7 +22,11 @@ public class mForm {
     private String campus;
     private String facility;
     private String preparing_date;
+    private String pre_date_show;
+    private String pre_time_show;
     private String starting_date;
+    private String start_date_show;
+    private String start_time_show;
     private String coordinator_name;
     private String coordinator_phone_number;
     private String description;
@@ -52,6 +56,39 @@ public class mForm {
         this.is_delete = false;
     }    
 
+    public String getPre_date_show() {
+        return pre_date_show;
+    }
+
+    public void setPre_date_show(String pre_date_show) {
+        this.pre_date_show = pre_date_show;
+    }
+
+    public String getPre_time_show() {
+        return pre_time_show;
+    }
+
+    public void setPre_time_show(String pre_time_show) {
+        this.pre_time_show = pre_time_show;
+    }
+
+    public String getStart_date_show() {
+        return start_date_show;
+    }
+
+    public void setStart_date_show(String start_date_show) {
+        this.start_date_show = start_date_show;
+    }
+
+    public String getStart_time_show() {
+        return start_time_show;
+    }
+
+    public void setStart_time_show(String start_time_show) {
+        this.start_time_show = start_time_show;
+    }
+
+    
     public int getForm_id() {
         return form_id;
     }

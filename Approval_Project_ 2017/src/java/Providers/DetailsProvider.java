@@ -30,6 +30,7 @@ public class DetailsProvider {
     String[] form_department_nameList = {"", "", "", "", "Properties", "Technical", "Sound & Light", "Art & Culture", "Security", "IT"};
 
     public mForm getFormDetails(int form_id) {
+        TimeConverter tc = new TimeConverter();
         mForm form = new mForm();
         try {
             ResultSet result = DBUtils.getPreparedStatement("select * from form where form.form_id = " + form_id).executeQuery();
@@ -40,8 +41,14 @@ public class DetailsProvider {
                 form.setDepartment(result.getString("department"));
                 form.setCampus(result.getString("campus"));
                 form.setFacility(result.getString("facility"));
-                form.setPreparing_date(result.getString("preparing_date"));
-                form.setStarting_date(result.getString("starting_date"));
+                String a = result.getString("preparing_date");
+                form.setPreparing_date(a);
+                form.setPre_date_show(tc.dateForShow(a));
+                form.setPre_time_show(tc.timeForShow(a) + "PM");
+                String b = result.getString("starting_date");
+                form.setStarting_date(b);
+                form.setStart_date_show(tc.dateForShow(b));
+                form.setStart_time_show(tc.timeForShow(b));
                 form.setCoordinator_name(result.getString("coordinator_name"));
                 form.setCoordinator_phone_number(result.getString("coordinator_phone_number"));
                 form.setDescription(result.getString("description"));

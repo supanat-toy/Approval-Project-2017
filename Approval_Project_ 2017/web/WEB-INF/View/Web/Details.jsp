@@ -131,14 +131,14 @@
                                             <div class="col_percent_7 set_padding_right_15">
                                                 <label>Preparation Date</label>
                                                 <div class="input-group date" id="datepicker-disabled-past_pre_startDate" data-date-format="dd/mm/yyyy" data-date-start-date="Date.default">
-                                                    <input type="text" name="pre_start_date" class="form_control_textField" value="${formDetails.preparing_date}" placeholder="" data-parsley-required="true" />
+                                                    <input type="text" name="pre_start_date" class="form_control_textField" value="${formDetails.pre_date_show}" placeholder="" data-parsley-required="true" />
                                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col_percent_5">
                                                 <label>Preparation Time</label>
                                                 <div class="input-group bootstrap-timepicker">
-                                                    <input id="timepicker_pre_startTime" name="pre_start_time" type="text" value="${formDetails.preparing_date}" class="form_control_textField">
+                                                    <input id="timepicker_pre_startTime" name="pre_start_time" type="text" value="${formDetails.pre_time_show}" class="form_control_textField">
                                                     <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
                                                 </div>
                                             </div>
@@ -147,14 +147,14 @@
                                             <div class="col_percent_7 set_padding_right_15">
                                                 <label>Starting Date</label>
                                                 <div class="input-group date" id="datepicker-disabled-past_startDate" data-date-format="dd/mm/yyyy" data-date-start-date="Date.default">
-                                                    <input type="text" name="start_date" class="form_control_textField" value="${formDetails.starting_date}" placeholder="" data-parsley-required="true" />
+                                                    <input type="text" name="start_date" class="form_control_textField" value="${formDetails.start_date_show}" placeholder="" data-parsley-required="true" />
                                                     <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                                                 </div>
                                             </div>
                                             <div class="col_percent_5">
                                                 <label>Starting Time</label>
                                                 <div class="input-group bootstrap-timepicker">
-                                                    <input id="timepicker_startTime" name="start_time" type="text" value="${formDetails.starting_date}" class="form_control_textField">
+                                                    <input id="timepicker_startTime" name="start_time" type="text" value="${formDetails.start_time_show}" class="form_control_textField">
                                                     <span class="input-group-addon"><i class="fa fa-clock-o"></i></span>
                                                 </div>
                                             </div>
