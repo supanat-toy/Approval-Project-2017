@@ -44,7 +44,7 @@ public class DetailsProvider {
                 String a = result.getString("preparing_date");
                 form.setPreparing_date(a);
                 form.setPre_date_show(tc.dateForShow(a));
-                form.setPre_time_show(tc.timeForShow(a) + "PM");
+                form.setPre_time_show(tc.timeForShow(a) + " PM");
                 String b = result.getString("starting_date");
                 form.setStarting_date(b);
                 form.setStart_date_show(tc.dateForShow(b));

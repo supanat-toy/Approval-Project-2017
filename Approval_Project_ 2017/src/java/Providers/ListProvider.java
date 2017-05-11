@@ -39,7 +39,7 @@ public class ListProvider {
                 boolean is_approved_admin = result.getBoolean("is_approved_admin");
                 form.setAdmin_progress(is_approved_admin);
                 form.setSupervisor_progress(is_approved_supervisor);
-                form.setDepartment_progress(getDepartmentProgress(form_id));
+                form.setDepartment_progress(false);
                 int supervisor_id = result.getInt("approved_by_supervisor");
                 int admin_id = result.getInt("approved_by_admin");
                 if(is_approved_admin){
@@ -72,7 +72,7 @@ public class ListProvider {
                 boolean is_approved_admin = result.getBoolean("is_approved_admin");
                 form.setAdmin_progress(is_approved_admin);
                 form.setSupervisor_progress(is_approved_supervisor);
-                form.setDepartment_progress(getDepartmentProgress(form_id));
+                form.setDepartment_progress(false);
                 int supervisor_id = result.getInt("approved_by_supervisor");
                 int admin_id = result.getInt("approved_by_admin");
                 if(is_approved_admin){
@@ -105,7 +105,7 @@ public class ListProvider {
                 boolean is_approved_admin = result.getBoolean("is_approved_admin");
                 form.setAdmin_progress(is_approved_admin);
                 form.setSupervisor_progress(is_approved_supervisor);
-                form.setDepartment_progress(getDepartmentProgress(form_id));
+                form.setDepartment_progress(false);
                 int supervisor_id = result.getInt("approved_by_supervisor");
                 int admin_id = result.getInt("approved_by_admin");
                 if(is_approved_admin){

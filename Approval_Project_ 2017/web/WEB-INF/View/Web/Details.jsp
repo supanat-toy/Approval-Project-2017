@@ -78,7 +78,7 @@
                             </c:if>     
                     </ul>
                     <div class="tab_content tab-content">
-                        <form action="${pageContext.servletContext.contextPath}/${formTypeName}/Update" method="POST" data-parsley-validate="true">
+                        <form action="${pageContext.servletContext.contextPath}/${formTypeName}/Details?id=${formDetails.form_id}" method="POST" data-parsley-validate="true">
                             <div id="Details_tab" class="tab-pane fade in active">
                                 <div class="topic">
                                     <i class="fa fa-file-text-o" aria-hidden="true"></i> Details
@@ -189,11 +189,13 @@
                                             <label>Description</label>
                                             <textarea name="0_description" class="form_control_textField">${formDetails.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
-                                            <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                        
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
+                                                <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div>
-
+                                        </c:if>
                                     </div>
                                     
                             <div class="col_percent_4 box_side_response_part_request">
@@ -350,10 +352,13 @@
                                             <label>Description</label>
                                             <textarea name="1_description" class="form_control_textField">${formDepartment_properties.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
+                                        
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
                                         </div> 
+                                        </c:if>
                                 </div>
                                 <div class="col_percent_4 box_side_response_part_request">
                                     <div class="topic">
@@ -522,10 +527,13 @@
                                             <label>Description</label>
                                             <textarea name="2_description" class="form_control_textField">${formDepartment_technical.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
+                                        
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-                                        </div>
+                                        </div> 
+                                        </c:if>
                                     
                                 </div>
                                 <div class="col_percent_4 box_side_response_part_request">
@@ -628,10 +636,12 @@
                                             <label>Description</label>
                                             <textarea name="3_description" class="form_control_textField">${formDepartment_soundAndLight.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-                                        </div>
+                                        </div> 
+                                        </c:if>
                                    
                                 </div>
                                 <div class="col_percent_4 box_side_response_part_request">
@@ -712,10 +722,12 @@
                                             <label>Description</label>
                                             <textarea name="4_description" class="form_control_textField">${formDepartment_artAndCulture.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-                                        </div>
+                                        </div> 
+                                        </c:if>
                                  
                                 </div>
                                 <div class="col_percent_4 box_side_response_part_request">
@@ -795,10 +807,12 @@
                                             <label>Description</label>
                                             <textarea name="5_description" class="form_control_textField">${formDepartment_secuity.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
                                             <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
                                             <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-                                        </div>
+                                        </div> 
+                                        </c:if>
                                     
                                 </div>
                                 <div class="col_percent_4 box_side_response_part_request">
@@ -934,10 +948,13 @@
                                             <label>Description</label>
                                             <textarea name="6_description" class="form_control_textField">${formDepartment_IT.description}</textarea>
                                         </div>
-                                        <div class="form_footer_submit form_group_row">
-                                            <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
-                                            <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
-                                        </div>
+                                        <c:if test="${userProfile.responsible_form_type_id == 1}">
+                                            <div class="form_footer_submit form_group_row">
+                                                <a href="#event_imagesDescription_tab" onclick="SetNavBarActiveURL()" class="set_btn_confirm_md_backgroundWhite" type="submit">Next <i class="fa fa-chevron-right" aria-hidden="true"></i></a>
+                                                <button class="set_btn_confirm_md set_float_right" type="submit"><i class="fa fa-floppy-o" aria-hidden="true"></i> Save</button>
+                                            </div>
+                                        </c:if>
+                                       
                                   
                                 </div>
                                 <div class="col_percent_4 box_side_response_part_request">

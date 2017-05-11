@@ -113,6 +113,7 @@ page import="Models.*;"
                                                                     <span class="title_progress_bar">Administrative Director</span>
                                                                 </li>
                                                             </c:if>
+                                                                <!--
                                                             <c:if test="${formDisplay.department_progress == true}">
                                                                 <li class="is-complete">
                                                                     <span class="title_progress_bar">Department</span>
@@ -129,7 +130,13 @@ page import="Models.*;"
                                                                     <span class="title_progress_bar">Done</span>
                                                                 </li>
                                                             </c:if>
-                   
+                   --->
+                                                                <li class="">
+                                                                    <span class="title_progress_bar">Department</span>
+                                                                </li>
+                                                                <li class="progress__last">
+                                                                    <span class="title_progress_bar">Done</span>
+                                                                </li>
                                                         </ol>
                                                     </div>
                                                 </div>

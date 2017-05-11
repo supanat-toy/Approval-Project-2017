@@ -28,7 +28,8 @@ import java.util.List;
             loadOnStartup = 1,
             urlPatterns = { "/Coordinator", 
                             "/Coordinator/Create", 
-                            "/Coordinator/Details"
+                            "/Coordinator/Details",
+                            "/Coordinator/Update"
 })
 public class CoordinatorServlet extends HttpServlet {
 
@@ -232,16 +233,19 @@ public class CoordinatorServlet extends HttpServlet {
             }else{
                 userPath = "/Coordinator/Create";
             }
+            
+            response.sendRedirect(request.getContextPath() + "/Coordinator");
+            
         }
 
 
-        String url = "/WEB-INF/View/Web" + userPath + ".jsp";
-
-        try {
-            request.getRequestDispatcher(url).forward(request, response);
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        }
+//        String url = "/WEB-INF/View/Web" + userPath + ".jsp";
+//
+//        try {
+//            request.getRequestDispatcher(url).forward(request, response);
+//        } catch (Exception ex) {
+//            ex.printStackTrace();
+//        }
         
         //processRequest(request, response);
     }

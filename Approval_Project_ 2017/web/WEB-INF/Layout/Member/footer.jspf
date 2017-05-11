@@ -25,11 +25,11 @@
         $(document).ready(function () {
             $("#multiple-select2").select2({ placeholder: "" });
             $('#timepicker_startTime').timepicker();
-            $('#timepicker_endTime').timepicker();
+            $('#timepicker_pre_startTime').timepicker();
             $('#datepicker-disabled-past_startDate').datepicker({
                 todayHighlight: true
             });
-            $('#datepicker-disabled-past_endDate').datepicker({
+            $('#datepicker-disabled-past_pre_startDate').datepicker({
                 todayHighlight: true,
 
             });
