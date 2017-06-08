@@ -1,5 +1,6 @@
 # Approval-Project-2017
-This project is a webbase approval system which consists of 4 group of users.
+------------------------------------------------------------------
+This project is about Approval system for who want to use rooms or facilities in Assumption University which consists of 4 group of users.
 * coordinator
 * supervisor
 * adminstrator
