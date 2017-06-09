@@ -8,8 +8,7 @@ This project is about Approval system for who want to use rooms or facilities in
 
 # Process and Step
 * 1. coordinator submits request form to use rooms or facilities in Assumption University
-* 2. supervisor who is responsible person of in each department or faculty will check information of request form
-*     he/she can approve or reject request form
+* 2. supervisor who is responsible person of in each department or faculty will check information of request form, he/she can approve or reject request form
 * 3. adminstrator is the next step of supervisor if he/she has approved request form, adminstrator will also check information of request form. If adminstrator is approved request form, request form will distribute to every department header who is involved request form
 * 4. department header will get requirements of request form and also can respond message to communication of coordinator and supervisor
 
